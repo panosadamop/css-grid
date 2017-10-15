@@ -1,0 +1,443 @@
+
+/*
+CSS Structure
+------------------------------------------------------------
+01. Normalise
+02. Fonts
+03. Header + Menu + Footer
+04. Website Styles
+05. Mobile, below 767 width
+------------------------------------------------------------
+*/
+
+/* 01. Normalise */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+}
+body {
+	width:100%;
+	margin:0 auto;
+	font-family:'poppinslight', Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	color:#74797e;
+	background-color:#fff;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+	margin:0 auto;
+	overflow-x:hidden;
+}
+/* 02. Fonts - Create your own https://www.fontsquirrel.com/tools/webfont-generator */
+@font-face {
+    font-family: 'poppinslight';
+    src: url('../fonts/poppins-light-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('../fonts/poppins-regular-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poppinssemibold';
+    src: url('../fonts/poppins-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 03. Header + Menu + Footer */
+.header-static,
+.header-fixed,
+.header-sticky,
+.header-reveal {
+	position:absolute;
+	width:auto;
+	left:0;
+	right:0;
+	background-color:#fff;
+	margin:0 auto;
+	padding:10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cdcfd1;
+	line-height:40px;
+	z-index:2;
+}
+.header-fixed {
+	position:fixed;
+}
+.header-sticky {
+	position:-webkit-sticky;
+	position:-moz-sticky;
+	position:-o-sticky;
+	position:-ms-sticky;
+	position:sticky;
+	top:0;
+}
+.header-reveal {
+	top:0;
+	position:fixed;
+}
+.nav-down {
+	top:-62px;
+}
+.nav-up {
+	top:0;
+}
+.logo {
+	padding-left:10px;
+	padding-right:10px;
+	font-family:'poppinsregular', Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	z-index:3;
+	position:relative;
+}
+.logo a {
+	display:block;
+	width:100%;
+	height:100%;
+}
+.footer .logo {
+	padding-left:0;
+}
+.nav-right .logo {
+	float:left;
+}
+.nav-left .logo {
+	float:right;
+}
+.nav-center .logo {
+	margin:0 auto;
+	text-align:center;
+	float:none;
+}
+.nav-center + .wrapper {
+	padding-top:90px;
+}
+.nav-right .nav {
+	float:right;
+}
+.nav-left .nav {
+	float:left;
+}
+.nav-center .nav {
+	float:none;
+	margin:0 auto;
+	text-align:center;
+	display:block;
+}
+.nav {
+	z-index:2;
+	display:inline-block;
+}
+ul.nav-buttons {
+	list-style:none;
+}
+ul.nav-buttons li {
+	text-align:left;
+	display:inline-block;
+}
+ul.nav-buttons li a {
+	font-size:15px;
+	display:inline-block;
+	text-decoration:none;
+	line-height:40px;
+	padding-left:10px;
+	padding-right:10px;
+}
+ul.nav-buttons li:hover a {
+	background-color:#f2f3f3;
+}
+/* Hover Nav */
+ul.nav-buttons li ul {
+	position:absolute;
+	width:160px;
+	opacity:0.5;
+	display:none;
+}
+ul.nav-buttons li:hover ul {
+	opacity:1;
+	display:block;
+}
+ul.nav-buttons li ul li {
+	display:block;
+	background-color:#f2f3f3;
+}
+ul.nav-buttons li ul li a {
+	display:block;
+	background-color:#f2f3f3;
+}
+ul.nav-buttons li ul li a:hover,
+ul.nav-buttons li ul li.current a {
+	display:block;
+	background-color:#fbfbfb;
+}
+
+/* 04. Website Styles */
+/* Animation timing for sliding mobile nav, 0.5 secs */
+.wrapper, a, a img, .header-reveal, .nav, .nav-off, .line-nav-1, .line-nav-2, .line-nav-3, .line-nav-4, .logo {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+a {
+	text-decoration:none;
+	outline:0;
+	color:#74797e;
+}
+strong {
+	font-family:'poppinssemibold', Arial, Helvetica, sans-serif;
+	font-weight:normal;
+}
+.wrapper a,
+.footer a {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #b3b6b9;
+}
+.wrapper a:hover,
+.footer a:hover {
+	border-bottom-color: #74797e;
+}
+img,
+img a {
+	font-size:14px;
+	color:#999;
+	border:0;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:auto;
+}
+.wrapper {
+	padding-top:60px;
+	width:100%;
+	height:auto;
+	position:relative;
+	z-index:1;
+}
+.wrapper-padding {
+	padding-top:60px;
+	padding-left:20px;
+	padding-right:20px;
+}
+.max-width {
+	max-width:1200px;
+	margin:0 auto;
+}
+.welcome {
+	padding-bottom:40px;
+}
+h1 {
+	font-weight:normal;
+	font-size:20px;
+	line-height:30px;
+	padding-bottom:30px;
+}
+h2 {
+	font-family:'poppinssemibold', Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	text-align:center;
+	padding-top:30px;
+	padding-bottom:20px;
+}
+
+/* Footer */
+.footer {
+	font-size:14px;
+	line-height:22px;
+	background-color:#f2f3f3;
+	padding-top:60px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:60px;
+}
+
+/* 05. Mobile, below 767 width */
+@media screen and (min-width: 0px) and (max-width: 767px) {
+
+.header-sticky ul.nav-buttons {
+	margin-top:0;
+}
+.wrapper {
+	opacity:1;
+}
+.wrapper-push {
+	opacity:0.2;
+}
+h1 {
+	font-size:18px;
+}
+.navclosed {
+	color:transparent;
+	display:block;
+	width:60px;
+	height:60px;
+	position:absolute;
+	top:0;
+	z-index:5;
+	cursor:pointer;
+}
+.navclosed a {
+	color:transparent;
+	display:block;
+	width:100%;
+	height:100%;
+}
+.nav-right .navclosed,
+.nav-center .navclosed {
+	right:6px;
+}
+.nav-left .navclosed {
+	left:6px;
+}
+.nav-right .close-side,
+.nav-left .close-side,
+.nav-center .close-side {
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:100%;
+	right:0;
+	z-index:3;
+}
+.nav-left .close-side-on {
+	left:320px;
+}
+.nav-right .close-side-on,
+.nav-center .close-side-on {
+	left:0;
+	right:320px;
+}
+.line-nav-1,
+.line-nav-2,
+.line-nav-3,
+.line-nav-4 {
+	width:32px;
+	height:1px;
+	position:absolute;
+	background-color:#74797e;
+}
+.line-nav-1 {
+	top:20px;
+	left:14px;
+}
+.line-nav-4 {
+	top:38px;
+	left:14px;
+}
+.line-nav-2,
+.line-nav-3 {
+	top:29px;
+	left:14px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.line-nav-2-open {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.line-nav-3-open {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.line-nav-1-open,
+.line-nav-4-open {
+	opacity:0;
+}
+.nav-off {
+	top:0;
+	bottom:0;
+	left:auto;
+	right:auto;
+	position:fixed;
+	opacity:0;
+	background-color:#f2f3f3;
+}
+.nav-on {
+	top:0;
+	bottom:0;
+	left:auto;
+	right:auto;
+	position:fixed;
+	opacity:1;
+	background-color:#f2f3f3;
+}
+.nav {
+	position:absolute;
+	width:auto;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.nav-right .nav-off,
+.nav-center .nav-off {
+	right:-310px;
+	width:280px;
+}
+.nav-right .nav-on,
+.nav-center .nav-on {
+	right:0;
+	width:280px;
+}
+.nav-left .nav-off {
+	left:-320px;
+	width:280px;
+}
+.nav-left .nav-on {
+	left:0;
+	width:280px;
+}
+.nav-center + .wrapper {
+	padding-top:60px;
+}
+ul.nav-buttons {
+	padding:20px;
+	margin-top:60px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+ul.nav-buttons li {
+	display:block;
+}
+ul.nav-buttons li a {
+	display:block;
+	text-decoration:none;
+	line-height:40px;
+}
+/* Hover Nav */
+ul.nav-buttons li ul {
+	position:relative;
+	width:auto;
+	opacity:1;
+	display:block;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cdcfd1;
+}
+
+}

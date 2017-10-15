@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<title>Responsive CSS Grid | Build your own websites with this easy - use responsive html5 css grid.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- Favicon images -->
+<link href="http://www.cssgrid.co/css-grid/images/favicon-16x16.png" sizes="16x16" rel="shortcut icon" type="image/png">
+<link href="http://www.cssgrid.co/css-grid/images/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
+<link href="http://www.cssgrid.co/css-grid/images/favicon-32x32.png" sizes="32x32" rel="shortcut icon" type="image/png">
+<link href="http://www.cssgrid.co/css-grid/images/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
+
+<!-- SEO -->
+<meta name="keywords" content="responsive, css, grid, web, developer, html5, mobile, iphone, build, website, websites" />
+<meta name="description" content="Download CSS Grid, easy to use for web developers." />
+
+<!-- Make web page appear 1:1 on devices, allow scale -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Add - Home Screen for iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- CSS by dnacreative.gr -->
+<link rel="stylesheet" type="text/css" media="all" href="css/cssgrid.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/header.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/prism.css" />
+
+</head>
+<body>
+
+<!-- Header -->
+<header class="header-fixed nav-right clearfix">
+
+	<div class="logo">
+	<a href="index.html" title="Responsive CSS Grid"><strong>DNA </strong>CSS Grid</a>
+	</div>
+
+	<div class="navclosed">
+		<div class="line-nav-1"></div>
+		<div class="line-nav-2"></div>
+		<div class="line-nav-3"></div>
+		<div class="line-nav-4"></div>
+	</div>
+	<div class="close-side"><a href="#"></a></div>
+
+	<!-- Nav -->
+	<nav class="nav">
+		<ul class="nav-buttons nav-off">
+			<li><a href="#">+ Columns</a>
+				<ul>
+				<li class="current"><a href="index.html">- Percantage</a></li>
+				<li><a href="columns_fixed.html">- Fixed</a></li>
+				<li><a href="columns_margins.html">- Margins</a></li>
+				<li><a href="columns_stacking.html">- Stacking</a></li>
+				</ul>
+			</li>
+			<li><a href="#">+ Header Options</a>
+				<ul>
+				<li><a href="header_static.html">- Static</a></li>
+				<li><a href="header_fixed.html">- Fixed</a></li>
+				<li><a href="header_sticky.html">- Sticky</a></li>
+				<li><a href="header_reveal.html">- Reveal</a></li>
+				</ul>
+			</li>
+			<li><a href="#">+ Nav Options</a>
+				<ul>
+				<li><a href="nav_right.html">- Nav Right</a></li>
+				<li><a href="nav_left.html">- Nav Left</a></li>
+				<li><a href="nav_center.html">- Nav Center</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.cssgrid.co/css-grid/instructions/">Instructions</a></li>
+		</ul>
+	</nav>
+	<!-- / Nav -->
+
+</header>
+<!-- / Header -->
+
+<!-- Wrapper -->
+<div class="wrapper styled">
+<div class="wrapper-padding max-width">
+
+<!-- Welcome -->
+<div class="welcome">
+
+	<h1>Welcome to CSS Grid.<br>A simple, minimal and lightweight responsive css grid.<br>Designed for web developers looking for a simple grid to build websites.<br><br>- Use <a href="index.html">percentage</a> or <a href="columns_fixed.html">fixed</a> width columns from 1 to 8 with variations.<br>- Add <a href="columns_margins.html">margins</a> to columns.<br>- <a href="columns_stacking.html">Stack columns</a> for responsive using media queries.<br>- 4 header options, <a href="header_static.html">static</a>, <a href="header_fixed.html">fixed</a>, <a href="header_sticky.html">sticky</a>, <a href="header_reveal.html">reveal</a>.<br>- 3 navigation options, <a href="nav_right.html">right</a>, <a href="nav_left.html">left</a>, <a href="nav_center.html">center</a>.</h1>
+
+	<h1>Code example, percentage 2 columns:</h1>
+	<pre><code class="language-html">
+	&lt;div class="p2">
+		&lt;div class="one">
+			1
+		&lt;/div>
+		&lt;div class="two">
+			2
+		&lt;/div>
+	&lt;/div>
+	</code></pre>
+
+</div>
+<!-- / Welcome -->
+
+<h2>1 Column</h2>
+
+<!-- 1 Column -->
+<div class="p1 clearfix">
+	<div class="one">
+		1
+	</div>
+</div>
+<!-- / 1 Column -->
+
+<h2>2 Columns</h2>
+
+<!-- 2 Columns -->
+<div class="p2 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two">
+		2
+	</div>
+</div>
+<!-- / 2 Columns -->
+
+<h2>3 Columns</h2>
+
+<!-- 3 Columns -->
+<div class="p3 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two">
+		2
+	</div>
+	<div class="three">
+		3
+	</div>
+</div>
+<!-- / 3 Columns -->
+
+<!-- 3 Columns | 1, 2 - 3 -->
+<div class="p3 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-three">
+		2 - 3
+	</div>
+</div>
+<!-- / 3 Columns | 1, 2 - 3 -->
+
+<!-- 3 Columns | 1 - 2, 3 -->
+<div class="p3 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three">
+		3
+	</div>
+</div>
+<!-- / 3 Columns | 1 - 2, 3 -->
+
+<h2>4 Columns</h2>
+
+<!-- 4 Columns -->
+<div class="p4 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two">
+		2
+	</div>
+	<div class="three">
+		3
+	</div>
+	<div class="four">
+		4
+	</div>
+</div>
+<!-- / 4 Columns -->
+
+<!-- 4 Columns | 1, 2 - 4 -->
+<div class="p4 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-four">
+		2 - 4
+	</div>
+</div>
+<!-- / 4 Columns | 1, 2 - 4 -->
+
+<!-- 4 Columns | 1 - 2, 3 - 4 -->
+<div class="p4 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-four">
+		3 - 4
+	</div>
+</div>
+<!-- / 4 Columns | 1 - 2, 3 - 4 -->
+
+<!-- 4 Columns | 1 - 3, 4 -->
+<div class="p4 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four">
+		4
+	</div>
+</div>
+<!-- / 4 Columns | 1 - 3, 4 -->
+
+<!-- 4 Columns | 1, 2 - 3, 4 -->
+<div class="p4 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-three">
+		2 - 3
+	</div>
+	<div class="four">
+		4
+	</div>
+</div>
+<!-- / 4 Columns | 1, 2 - 3, 4 -->
+
+<!-- 4 Columns | 1, 2, 3 - 4 -->
+<div class="p4 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two">
+		2
+	</div>
+	<div class="three-four">
+		3 - 4
+	</div>
+</div>
+<!-- / 4 Columns | 1, 2, 3 - 4 -->
+
+<!-- 4 Columns | 1 - 2, 3, 4 -->
+<div class="p4 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three">
+		3
+	</div>
+	<div class="four">
+		4
+	</div>
+</div>
+<!-- / 4 Columns | 1 - 2, 3, 4 -->
+
+<h2>5 Columns</h2>
+
+<!-- 5 Columns -->
+<div class="p5 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two">
+		2
+	</div>
+	<div class="three">
+		3
+	</div>
+	<div class="four">
+		4
+	</div>
+	<div class="five">
+		5
+	</div>
+</div>
+<!-- / 5 Columns -->
+
+<!-- 5 Columns | 1, 2 - 5 -->
+<div class="p5 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-five">
+		2 - 5
+	</div>
+</div>
+<!-- / 5 Columns | 1, 2 - 5 -->
+
+<!-- 5 Columns | 1 - 2, 3 - 5 -->
+<div class="p5 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-five">
+		3 - 5
+	</div>
+</div>
+<!-- / 5 Columns | 1 - 2, 3 - 5 -->
+
+<!-- 5 Columns | 1 - 2, 3 - 4, 5 -->
+<div class="p5 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-four">
+		3 - 4
+	</div>
+	<div class="five">
+		5
+	</div>
+</div>
+<!-- / 5 Columns | 1 - 2, 3 - 4, 5 -->
+
+<!-- 5 Columns | 1 - 3, 4 - 5 -->
+<div class="p5 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four-five">
+		4 - 5
+	</div>
+</div>
+<!-- / 5 Columns | 1 - 3, 4 - 5 -->
+
+<!-- 5 Columns | 1 - 4, 5 -->
+<div class="p5 clearfix">
+	<div class="one-four">
+		1 - 4
+	</div>
+	<div class="five">
+		5
+	</div>
+</div>
+<!-- / 5 Columns | 1 - 4, 5 -->
+
+<!-- 5 Columns | 1, 2 - 4, 5 -->
+<div class="p5 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-four">
+		2 - 4
+	</div>
+	<div class="five">
+		5
+	</div>
+</div>
+<!-- / 5 Columns | 1, 2 - 4, 5 -->
+
+<!-- 5 Columns | 1, 2 - 3, 4 - 5 -->
+<div class="p5 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-three">
+		2 - 3
+	</div>
+	<div class="four-five">
+		4 - 5
+	</div>
+</div>
+<!-- / 5 Columns | 1, 2 - 3, 4 - 5 -->
+
+<h2>6 Columns</h2>
+
+<!-- 6 Columns -->
+<div class="p6 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two">
+		2
+	</div>
+	<div class="three">
+		3
+	</div>
+	<div class="four">
+		4
+	</div>
+	<div class="five">
+		5
+	</div>
+	<div class="six">
+		6
+	</div>
+</div>
+<!-- / 6 Columns -->
+
+<!-- 6 Columns | 1, 2 - 6 -->
+<div class="p6 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-six">
+		2 - 6
+	</div>
+</div>
+<!-- / 6 Columns | 1, 2 - 6 -->
+
+<!-- 6 Columns | 1 - 2, 3 - 6 -->
+<div class="p6 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-six">
+		3 - 6
+	</div>
+</div>
+<!-- / 6 Columns | 1 - 2, 3 - 6 -->
+
+<!-- 6 Columns | 1 - 3, 4 - 6 -->
+<div class="p6 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four-six">
+		4 - 6
+	</div>
+</div>
+<!-- / 6 Columns | 1 - 3, 4 - 6 -->
+
+<!-- 6 Columns | 1 - 4, 5 - 6 -->
+<div class="p6 clearfix">
+	<div class="one-four">
+		1 - 4
+	</div>
+	<div class="five-six">
+		5 - 6
+	</div>
+</div>
+<!-- / 6 Columns | 1 - 4, 5 - 6 -->
+
+<!-- 6 Columns | 1 - 5, 6 -->
+<div class="p6 clearfix">
+	<div class="one-five">
+		1 - 5
+	</div>
+	<div class="six">
+		6
+	</div>
+</div>
+<!-- / 6 Columns | 1 - 5, 6 -->
+
+<!-- 6 Columns | 1, 2 - 5, 6 -->
+<div class="p6 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-five">
+		2 - 5
+	</div>
+	<div class="six">
+		6
+	</div>
+</div>
+<!-- / 6 Columns | 1, 2 - 5, 6 -->
+
+<!-- 6 Columns | 1, 2 - 4, 5 - 6 -->
+<div class="p6 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-four">
+		2 - 4
+	</div>
+	<div class="five-six">
+		5 - 6
+	</div>
+</div>
+<!-- / 6 Columns | 1, 2 - 4, 5 - 6 -->
+
+<!-- 6 Columns | 1, 2 - 3, 4 - 6 -->
+<div class="p6 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-three">
+		2 - 3
+	</div>
+	<div class="four-six">
+		4 - 6
+	</div>
+</div>
+<!-- / 6 Columns | 1, 2 - 3, 4 - 6 -->
+
+<!-- 6 Columns | 1 - 2, 3 - 4, 5 - 6 -->
+<div class="p6 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-four">
+		3 - 4
+	</div>
+	<div class="five-six">
+		5 - 6
+	</div>
+</div>
+<!-- / 6 Columns | 1 - 2, 3 - 4, 5 - 6 -->
+
+<!-- 6 Columns | 1 - 2, 3 - 5, 6 -->
+<div class="p6 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-five">
+		3 - 5
+	</div>
+	<div class="six">
+		6
+	</div>
+</div>
+<!-- / 6 Columns | 1 - 2, 3 - 5, 6 -->
+
+<!-- 6 Columns | 1 - 3, 4 - 5, 6 -->
+<div class="p6 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four-five">
+		4 - 5
+	</div>
+	<div class="six">
+		6
+	</div>
+</div>
+<!-- / 6 Columns | 1 - 3, 4 - 5, 6 -->
+
+<h2>7 Columns</h2>
+
+<!-- 7 Columns -->
+<div class="p7 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two">
+		2
+	</div>
+	<div class="three">
+		3
+	</div>
+	<div class="four">
+		4
+	</div>
+	<div class="five">
+		5
+	</div>
+	<div class="six">
+		6
+	</div>
+	<div class="seven">
+		7
+	</div>
+</div>
+<!-- / 7 Columns -->
+
+<!-- 7 Columns | 1, 2 - 7 -->
+<div class="p7 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-seven">
+		2 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1, 2 - 7 -->
+
+<!-- 7 Columns | 1 - 2, 3 - 7 -->
+<div class="p7 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-seven">
+		3 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1 - 2, 3 - 7 -->
+
+<!-- 7 Columns | 1 - 3, 4 - 7 -->
+<div class="p7 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four-seven">
+		4 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1 - 3, 4 - 7 -->
+
+<!-- 7 Columns | 1 - 4, 5 - 7 -->
+<div class="p7 clearfix">
+	<div class="one-four">
+		1 - 4
+	</div>
+	<div class="five-seven">
+		5 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1 - 4, 5 - 7 -->
+
+<!-- 7 Columns | 1 - 5, 6 - 7 -->
+<div class="p7 clearfix">
+	<div class="one-five">
+		1 - 5
+	</div>
+	<div class="six-seven">
+		6 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1 - 5, 6 - 7 -->
+
+<!-- 7 Columns | 1 - 6, 7 -->
+<div class="p7 clearfix">
+	<div class="one-six">
+		1 - 6
+	</div>
+	<div class="seven">
+		7
+	</div>
+</div>
+<!-- / 7 Columns | 1 - 6, 7 -->
+
+<!-- 7 Columns | 1, 2 - 6, 7 -->
+<div class="p7 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-six">
+		2 - 6
+	</div>
+	<div class="seven">
+		7
+	</div>
+</div>
+<!-- / 7 Columns | 1, 2 - 6, 7 -->
+
+<!-- 7 Columns | 1, 2 - 5, 6 - 7 -->
+<div class="p7 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-five">
+		2 - 5
+	</div>
+	<div class="six-seven">
+		6 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1, 2 - 5, 6 - 7 -->
+
+<!-- 7 Columns | 1, 2 - 4, 5 - 7 -->
+<div class="p7 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-four">
+		2 - 4
+	</div>
+	<div class="five-seven">
+		5 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1, 2 - 4, 5 - 7 -->
+
+<!-- 7 Columns | 1, 2 - 3, 4 - 7 -->
+<div class="p7 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-three">
+		2 - 3
+	</div>
+	<div class="four-seven">
+		4 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1, 2 - 3, 4 - 7 -->
+
+<!-- 7 Columns | 1 - 2, 3 - 6, 7 -->
+<div class="p7 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-six">
+		3 - 6
+	</div>
+	<div class="seven">
+		7
+	</div>
+</div>
+<!-- / 7 Columns | 1 - 2, 3 - 6, 7 -->
+
+<!-- 7 Columns | 1 - 2, 3 - 5, 6 - 7 -->
+<div class="p7 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-five">
+		3 - 5
+	</div>
+	<div class="six-seven">
+		6 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1 - 2, 3 - 5, 6 - 7 -->
+
+<!-- 7 Columns | 1 - 2, 3 - 4, 5 - 7 -->
+<div class="p7 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-four">
+		3 - 4
+	</div>
+	<div class="five-seven">
+		5 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1 - 2, 3 - 5, 6 - 7 -->
+
+<!-- 7 Columns | 1 - 3, 4 - 5, 6 - 7 -->
+<div class="p7 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four-five">
+		4 - 5
+	</div>
+	<div class="six-seven">
+		6 - 7
+	</div>
+</div>
+<!-- / 7 Columns | 1 - 3, 4 - 5, 6 - 7 -->
+
+<h2>8 Columns</h2>
+
+<!-- 8 Columns -->
+<div class="p8 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two">
+		2
+	</div>
+	<div class="three">
+		3
+	</div>
+	<div class="four">
+		4
+	</div>
+	<div class="five">
+		5
+	</div>
+	<div class="six">
+		6
+	</div>
+	<div class="seven">
+		7
+	</div>
+	<div class="eight">
+		8
+	</div>
+</div>
+<!-- / 8 Columns -->
+
+<!-- 8 Columns | 1, 2 - 8 -->
+<div class="p8 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-eight">
+		2 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1, 2 - 8 -->
+
+<!-- 8 Columns | 1 - 2, 3 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-eight">
+		3 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 2, 3 - 8 -->
+
+<!-- 8 Columns | 1 - 3, 4 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four-eight">
+		4 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 3, 4 - 8 -->
+
+<!-- 8 Columns | 1 - 4, 5 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-four">
+		1 - 4
+	</div>
+	<div class="five-eight">
+		5 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 4, 5 - 8 -->
+
+<!-- 8 Columns | 1 - 5, 6 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-five">
+		1 - 5
+	</div>
+	<div class="six-eight">
+		6 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 5, 6 - 8 -->
+
+<!-- 8 Columns | 1 - 6, 7 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-six">
+		1 - 6
+	</div>
+	<div class="seven-eight">
+		7 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 6, 7 - 8 -->
+
+<!-- 8 Columns | 1 - 7, 8 -->
+<div class="p8 clearfix">
+	<div class="one-seven">
+		1 - 7
+	</div>
+	<div class="eight">
+		8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 7, 8 -->
+
+<!-- 8 Columns | 1, 2 - 7, 8 -->
+<div class="p8 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-seven">
+		2 - 7
+	</div>
+	<div class="eight">
+		8
+	</div>
+</div>
+<!-- / 8 Columns | 1, 2 - 7, 8 -->
+
+<!-- 8 Columns | 1, 2 - 6, 7 - 8 -->
+<div class="p8 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-six">
+		2 - 6
+	</div>
+	<div class="seven-eight">
+		7 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1, 2 - 6, 7 - 8 -->
+
+<!-- 8 Columns | 1, 2 - 5, 6 - 8 -->
+<div class="p8 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-five">
+		2 - 5
+	</div>
+	<div class="six-eight">
+		6 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1, 2 - 5, 6 - 8 -->
+
+<!-- 8 Columns | 1, 2 - 4, 5 - 8 -->
+<div class="p8 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-four">
+		2 - 4
+	</div>
+	<div class="five-eight">
+		5 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1, 2 - 4, 5 - 8 -->
+
+<!-- 8 Columns | 1 - 2, 3 - 7, 8 -->
+<div class="p8 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-seven">
+		3 - 7
+	</div>
+	<div class="eight">
+		8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 2, 3 - 7, 8 -->
+
+<!-- 8 Columns | 1 - 2, 3 - 6, 7 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-six">
+		3 - 6
+	</div>
+	<div class="seven-eight">
+		7 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 2, 3 - 6, 7 - 8 -->
+
+<!-- 8 Columns | 1 - 2, 3 - 5, 6 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-five">
+		3 - 5
+	</div>
+	<div class="six-eight">
+		6 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 2, 3 - 5, 6 - 8 -->
+
+<!-- 8 Columns | 1 - 2, 3 - 4, 5 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-two">
+		1 - 2
+	</div>
+	<div class="three-four">
+		3 - 4
+	</div>
+	<div class="five-eight">
+		5 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 2, 3 - 4, 5 - 8 -->
+
+<!-- 8 Columns | 1 - 3, 4 - 5, 6 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four-five">
+		4 - 5
+	</div>
+	<div class="six-eight">
+		6 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 3, 4 - 5, 6 - 8 -->
+
+<!-- 8 Columns | 1 - 3, 4 - 6, 7 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four-six">
+		4 - 6
+	</div>
+	<div class="seven-eight">
+		7 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 3, 4 - 6, 7 - 8 -->
+
+<!-- 8 Columns | 1 - 3, 4 - 7, 8 -->
+<div class="p8 clearfix">
+	<div class="one-three">
+		1 - 3
+	</div>
+	<div class="four-seven">
+		4 - 7
+	</div>
+	<div class="eight">
+		8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 3, 4 - 7, 8 -->
+
+<!-- 8 Columns | 1 - 4, 5 - 6, 7 - 8 -->
+<div class="p8 clearfix">
+	<div class="one-four">
+		1 - 4
+	</div>
+	<div class="five-six">
+		5 - 6
+	</div>
+	<div class="seven-eight">
+		7 - 8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 4, 5 - 6, 7 - 8 -->
+
+<!-- 8 Columns | 1 - 4, 5 - 7, 8 -->
+<div class="p8 clearfix">
+	<div class="one-four">
+		1 - 4
+	</div>
+	<div class="five-seven">
+		5 - 7
+	</div>
+	<div class="eight">
+		8
+	</div>
+</div>
+<!-- / 8 Columns | 1 - 4, 5 - 7, 8 -->
+
+<!-- 8 Columns | 1, 2 - 3, 4 - 5, 6 - 7, 8 -->
+<div class="p8 clearfix">
+	<div class="one">
+		1
+	</div>
+	<div class="two-three">
+		2 - 3
+	</div>
+	<div class="four-five">
+		4 - 5
+	</div>
+	<div class="six-seven">
+		6 - 7
+	</div>
+	<div class="eight">
+		8
+	</div>
+</div>
+<!-- / 8 Columns | 1, 2 - 3, 4 - 5, 6 - 7, 8 -->
+
+</div>
+</div>
+<!-- / Wrapper -->
+
+<!-- Footer -->
+<footer class="footer">
+<div class="p2 stack max-width">
+	<div class="one">
+		<div class="logo">&copy; 2017 <strong>DNA</strong> CSS Grid</div>
+	</div>
+	<div class="two">
+		<p> <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.cssgrid.co%2Fcss-grid%2F">W3C Valid</a>.</p>
+	</div>
+</div>
+</footer>
+<!-- / Footer -->
+
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/prism.js"></script>
+</body>
+</html>

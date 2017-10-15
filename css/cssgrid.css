@@ -1,0 +1,3130 @@
+/*
+01. CSS Grid - Percentage and fixed width + margins
+02. iPad Landscape + higher
+03. iPad Portrait
+04. iPhone Landscape + Stacking to 2 columns or force to 1 column
+05. iPhone Portrait + Stacking to 1 column
+*/
+
+/* 01. CSS Grid */
+.clearfix:after { /* adding clearfix to the columns ensures the next set of columns clears the ones above */
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix {
+	display:inline-block;
+}
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+/* styled is added to display the columns, delete this to reset */
+.styled .f1 div, .styled .p1 div, .styled .f2 div, .styled .p2 div, .styled .f3 div, .styled .p3 div, .styled .f4 div, .styled .p4 div, .styled .f5 div, .styled .p5 div, .styled .f6 div, .styled .p6 div, .styled .f7 div, .styled .p7 div, .styled .f8 div, .styled .p8 div {
+	border-right-width:1px;
+	border-right-style:solid;
+	border-right-color:#fff;
+	margin-bottom:12px;
+	line-height:60px;
+	text-align:center;
+	background-color:#e0e2e3;
+}
+.styled .f1.margins div, .styled .p1.margins div, .styled .f2.margins div, .styled .p2.margins div, .styled .f3.margins div, .styled .p3.margins div, .styled .f4.margins div, .styled .p4.margins div, .styled .f5.margins div, .styled .p5.margins div, .styled .f6.margins div, .styled .p6.margins div, .styled .f7.margins div, .styled .p7.margins div, .styled .f8.margins div, .styled .p8.margins div {
+	border-right-width:0;
+}
+/* Setup Fixed + Percentage width and center */
+.f1, .f2, .f3, .f4, .f5, .f6, .f7, .f8 {
+	margin:0 auto;
+	/* The width for fixed is controlled on media queries below */
+}
+.p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8 {
+	width:99%;
+	margin:0 auto;
+}
+
+/* 1 Column */
+.f1 .one,
+.p1 .one {
+	width:100%;
+}
+
+/* 2 Columns - without margins */
+.f2 .one,
+.p2 .one {
+	width:50%;
+	float:left;
+}
+.f2 .two,
+.p2 .two {
+	width:50%;
+	margin-left:50%;
+}
+/* 2 Columns - with margins */
+.f2.margins .one,
+.p2.margins .one {
+	width:49.5%;
+	float:left;
+}
+.f2.margins .two,
+.p2.margins .two {
+	width:49.5%;
+	margin-left:50.5%;
+}
+
+/* 3 Columns - without margins */
+.f3 .one,
+.p3 .one {
+	width:33.3333%;
+	float:left;
+}
+.f3 .one-two,
+.p3 .one-two {
+	width:66.6666%;
+	margin-left:0;
+	float:left;
+}
+.f3 .two,
+.p3 .two {
+	width:33.3333%;
+	margin-left:0;
+	float:left;
+}
+.f3 .two-three,
+.p3 .two-three {
+	width:66.6666%;
+	margin-left:33.3333%;
+}
+.f3 .three,
+.p3 .three {
+	width:33.3333%;
+	margin-left:66.6666%;
+}
+/* 3 Columns - with margins */
+.f3.margins .one,
+.p3.margins .one {
+	width:32.5%;
+	float:left;
+}
+.f3.margins .one-two,
+.p3.margins .one-two {
+	width:66.25%;
+	margin-left:0;
+	float:left;
+}
+.f3.margins .two,
+.p3.margins .two {
+	width:32.5%;
+	margin-left:1.25%;
+	float:left;
+}
+.f3.margins .two-three,
+.p3.margins .two-three {
+	width:66.25%;
+	margin-left:33.75%;
+}
+.f3.margins .three,
+.p3.margins .three {
+	width:32.5%;
+	margin-left:67.5%;
+}
+
+/* 4 Columns - without margins */
+.f4 .one,
+.p4 .one {
+	width:25%;
+	float:left;
+}
+.f4 .one-two,
+.p4 .one-two {
+	width:50%;
+	float:left;
+}
+.f4 .one-three,
+.p4 .one-three {
+	width:75%;
+	float:left;
+}
+.f4 .two,
+.p4 .two {
+	width:25%;
+	float:left;
+}
+.f4 .two-three,
+.p4 .two-three {
+	width:50%;
+	float:left;
+}
+.f4 .two-four,
+.p4 .two-four {
+	width:75%;
+	margin-left:25%;
+}
+.f4 .three,
+.p4 .three {
+	width:25%;
+	float:left;
+}
+.f4 .three-four,
+.p4 .three-four {
+	width:50%;
+	margin-left:50%;
+}
+.f4 .four,
+.p4 .four {
+	width:25%;
+	margin-left:75%;
+}
+/* 4 Columns - with margins */
+.f4.margins .one,
+.p4.margins .one {
+	width:24.25%;
+	float:left;
+}
+.f4.margins .one-two,
+.p4.margins .one-two {
+	width:49.5%;
+	float:left;
+}
+.f4.margins .one-three,
+.p4.margins .one-three {
+	width:74.75%;
+	float:left;
+}
+.f4.margins .two,
+.p4.margins .two {
+	width:24.25%;
+	margin-left:1%;
+	float:left;
+}
+.f4.margins .two-three,
+.p4.margins .two-three {
+	width:49.5%;
+	margin-left:1%;
+	float:left;
+}
+.f4.margins .two-four,
+.p4.margins .two-four {
+	width:74.75%;
+	margin-left:25.25%;
+}
+.f4.margins .three,
+.p4.margins .three {
+	width:24.25%;
+	margin-left:1%;
+	float:left;
+}
+.f4.margins .three-four,
+.p4.margins .three-four {
+	width:49.5%;
+	margin-left:50.5%;
+}
+.f4.margins .four,
+.p4.margins .four {
+	width:25%;
+	width:24.25%;
+	margin-left:75.75%;
+}
+
+/* 5 Columns - without margins */
+.f5 .one,
+.p5 .one {
+	width:20%;
+	float:left;
+}
+.f5 .one-two,
+.p5 .one-two {
+	width:40%;
+	float:left;
+}
+.f5 .one-three,
+.p5 .one-three {
+	width:60%;
+	float:left;
+}
+.f5 .one-four,
+.p5 .one-four {
+	width:80%;
+	float:left;
+}
+.f5 .two,
+.p5 .two {
+	width:20%;
+	float:left;
+}
+.f5 .two-three,
+.p5 .two-three {
+	width:40%;
+	float:left;
+}
+.f5 .two-four,
+.p5 .two-four {
+	width:60%;
+	float:left;
+}
+.f5 .two-five,
+.p5 .two-five {
+	width:80%;
+	margin-left:20%;
+}
+.f5 .three,
+.p5 .three {
+	width:20%;
+	float:left;
+}
+.f5 .three-four,
+.p5 .three-four {
+	width:40%;
+	float:left;
+}
+.f5 .three-five,
+.p5 .three-five {
+	width:60%;
+	margin-left:40%;
+}
+.f5 .four,
+.p5 .four {
+	width:20%;
+	float:left;
+}
+.f5 .four-five,
+.p5 .four-five {
+	width:40%;
+	margin-left:60%;
+}
+.f5 .five,
+.p5 .five {
+	width:20%;
+	margin-left:80%;
+}
+/* 5 Columns - with margins */
+.f5.margins .one,
+.p5.margins .one {
+	width:19.2%;
+	float:left;
+}
+.f5.margins .one-two,
+.p5.margins .one-two {
+	width:39.4%;
+	float:left;
+}
+.f5.margins .one-three,
+.p5.margins .one-three {
+	width:59.6%;
+	float:left;
+}
+.f5.margins .one-four,
+.p5.margins .one-four {
+	width:79.8%;
+	float:left;
+}
+.f5.margins .two,
+.p5.margins .two {
+	width:19.2%;
+	margin-left:1%;
+	float:left;
+}
+.f5.margins .two-three,
+.p5.margins .two-three {
+	width:39.4%;
+	margin-left:1%;
+	float:left;
+}
+.f5.margins .two-four,
+.p5.margins .two-four {
+	width:59.6%;
+	margin-left:1%;
+	float:left;
+}
+.f5.margins .two-five,
+.p5.margins .two-five {
+	width:79.8%;
+	margin-left:20.2%;
+}
+.f5.margins .three,
+.p5.margins .three {
+	width:19.2%;
+	margin-left:1%;
+	float:left;
+}
+.f5.margins .three-four,
+.p5.margins .three-four {
+	width:39.4%;
+	margin-left:1%;
+	float:left;
+}
+.f5.margins .three-five,
+.p5.margins .three-five {
+	width:59.6%;
+	margin-left:40.4%;
+}
+.f5.margins .four,
+.p5.margins .four {
+	width:19.2%;
+	margin-left:1%;
+	float:left;
+}
+.f5.margins .four-five,
+.p5.margins .four-five {
+	width:39.4%;
+	margin-left:60.6%;
+}
+.f5.margins .five,
+.p5.margins .five {
+	width:19.2%;
+	margin-left:80.8%;
+}
+
+/* 6 Columns - without margins */
+.f6 .one,
+.p6 .one {
+	width:16.666666%;
+	float:left;
+}
+.f6 .one-two,
+.p6 .one-two {
+	width:33.333333%;
+	float:left;
+}
+.f6 .one-three,
+.p6 .one-three {
+	width:50%;
+	float:left;
+}
+.f6 .one-four,
+.p6 .one-four {
+	width:66.666666%;
+	float:left;
+}
+.f6 .one-five,
+.p6 .one-five {
+	width:83.333333%;
+	float:left;
+}
+.f6 .two,
+.p6 .two {
+	width:16.666666%;
+	float:left;
+}
+.f6 .two-three,
+.p6 .two-three {
+	width:33.333333%;
+	float:left;
+}
+.f6 .two-four,
+.p6 .two-four {
+	width:50%;
+	float:left;
+}
+.f6 .two-five,
+.p6 .two-five {
+	width:66.666666%;
+	float:left;
+}
+.f6 .two-six,
+.p6 .two-six {
+	width:83.333333%;
+	margin-left:16.666666%;
+}
+.f6 .three,
+.p6 .three {
+	width:16.666666%;
+	float:left;
+}
+.f6 .three-four,
+.p6 .three-four {
+	width:33.333333%;
+	float:left;
+}
+.f6 .three-five,
+.p6 .three-five {
+	width:50%;
+	float:left;
+}
+.f6 .three-six,
+.p6 .three-six {
+	width:66.666666%;
+	margin-left:33.333333%;
+}
+.f6 .four,
+.p6 .four {
+	width:16.666666%;
+	float:left;
+}
+.f6 .four-five,
+.p6 .four-five {
+	width:33.333333%;
+	float:left;
+}
+.f6 .four-six,
+.p6 .four-six {
+	width:50%;
+	margin-left:50%;
+}
+.f6 .five,
+.p6 .five {
+	width:16.666666%;
+	float:left;
+}
+.f6 .five-six,
+.p6 .five-six {
+	width:33.333333%;
+	margin-left:66.666666%;
+}
+.f6 .six,
+.p6 .six {
+	width:16.666666%;
+	margin-left:83.333333%;
+}
+/* 6 Columns - with margins */
+.f6.margins .one,
+.p6.margins .one {
+	width:15.83%;
+	float:left;
+}
+.f6.margins .one-two,
+.p6.margins .one-two {
+	width:32.66%;
+	float:left;
+}
+.f6.margins .one-three,
+.p6.margins .one-three {
+	width:49.49%;
+	float:left;
+}
+.f6.margins .one-four,
+.p6.margins .one-four {
+	width:66.32%;
+	float:left;
+}
+.f6.margins .one-five,
+.p6.margins .one-five {
+	width:83.15%;
+	float:left;
+}
+.f6.margins .two,
+.p6.margins .two {
+	width:15.83%;
+	margin-left:1%;
+	float:left;
+}
+.f6.margins .two-three,
+.p6.margins .two-three {
+	width:32.66%;
+	margin-left:1%;
+	float:left;
+}
+.f6.margins .two-four,
+.p6.margins .two-four {
+	width:49.49%;
+	margin-left:1%;
+	float:left;
+}
+.f6.margins .two-five,
+.p6.margins .two-five {
+	width:66.32%;
+	margin-left:1%;
+	float:left;
+}
+.f6.margins .two-six,
+.p6.margins .two-six {
+	width:83.15%;
+	margin-left:16.83%;
+}
+.f6.margins .three,
+.p6.margins .three {
+	width:15.83%;
+	margin-left:1%;
+	float:left;
+}
+.f6.margins .three-four,
+.p6.margins .three-four {
+	width:32.66%;
+	margin-left:1%;
+	float:left;
+}
+.f6.margins .three-five,
+.p6.margins .three-five {
+	width:49.49%;
+	margin-left:1%;
+	float:left;
+}
+.f6.margins .three-six,
+.p6.margins .three-six {
+	width:66.32%;
+	margin-left:33.66%;
+}
+.f6.margins .four,
+.p6.margins .four {
+	width:15.83%;
+	margin-left:1%;
+	float:left;
+}
+.f6.margins .four-five,
+.p6.margins .four-five {
+	width:32.66%;
+	margin-left:1%;
+	float:left;
+}
+.f6.margins .four-six,
+.p6.margins .four-six {
+	width:49.49%;
+	margin-left:50.49%;
+}
+.f6.margins .five,
+.p6.margins .five {
+	width:15.83%;
+	float:left;
+	margin-left:1%;
+}
+.f6.margins .five-six,
+.p6.margins .five-six {
+	width:32.66%;
+	margin-left:67.32%;
+}
+.f6.margins .six,
+.p6.margins .six {
+	width:15.83%;
+	margin-left:84.15%;
+}
+
+/* 7 Columns - without margins */
+.f7 .one,
+.p7 .one {
+	width:14.286%;
+	float:left;
+}
+.f7 .one-two,
+.p7 .one-two {
+	width:28.571%;
+	float:left;
+}
+.f7 .one-three,
+.p7 .one-three {
+	width:42.857%;
+	float:left;
+}
+.f7 .one-four,
+.p7 .one-four {
+	width:57.143%;
+	float:left;
+}
+.f7 .one-five,
+.p7 .one-five {
+	width:71.423%;
+	float:left;
+}
+.f7 .one-six,
+.p7 .one-six {
+	width:85.714%;
+	float:left;
+}
+.f7 .two,
+.p7 .two {
+	width:14.286%;
+	float:left;
+}
+.f7 .two-three,
+.p7 .two-three {
+	width:28.571%;
+	float:left;
+}
+.f7 .two-four,
+.p7 .two-four {
+	width:42.857%;
+	float:left;
+}
+.f7 .two-five,
+.p7 .two-five {
+	width:57.143%;
+	float:left;
+}
+.f7 .two-six,
+.p7 .two-six {
+	width:71.423%;
+	float:left;
+}
+.f7 .two-seven,
+.p7 .two-seven {
+	width:85.714%;
+	margin-left:14.286%;
+}
+.f7 .three,
+.p7 .three {
+	width:14.286%;
+	float:left;
+}
+.f7 .three-four,
+.p7 .three-four {
+	width:28.571%;
+	float:left;
+}
+.f7 .three-five,
+.p7 .three-five {
+	width:42.857%;
+	float:left;
+}
+.f7 .three-six,
+.p7 .three-six {
+	width:57.143%;
+	float:left;
+}
+.f7 .three-seven,
+.p7 .three-seven {
+	width:71.429%;
+	margin-left:28.571%;
+}
+.f7 .four,
+.p7 .four {
+	width:14.286%;
+	float:left;
+}
+.f7 .four-five,
+.p7 .four-five {
+	width:28.571%;
+	float:left;
+}
+.f7 .four-seven,
+.p7 .four-seven {
+	width:57.143%;
+	margin-left:42.857%;
+}
+.f7 .five,
+.p7 .five {
+	width:14.286%;
+	float:left;
+}
+.f7 .five-seven,
+.p7 .five-seven {
+	width:42.857%;
+	margin-left:57.143%;
+}
+.f7 .six,
+.p7 .six {
+	width:14.286%;
+	float:left;
+}
+.f7 .six-seven,
+.p7 .six-seven {
+	width:28.571%;
+	margin-left:71.423%;
+}
+.f7 .seven,
+.p7 .seven {
+	width:14.286%;
+	margin-left:85.714%;
+}
+/* 7 Columns - with margins */
+.f7.margins .one,
+.p7.margins .one {
+	width:13.43%;
+	float:left;
+}
+.f7.margins .one-two,
+.p7.margins .one-two {
+	width:27.86%;
+	float:left;
+}
+.f7.margins .one-three,
+.p7.margins .one-three {
+	width:42.29%;
+	float:left;
+}
+.f7.margins .one-four,
+.p7.margins .one-four {
+	width:56.72%;
+	float:left;
+}
+.f7.margins .one-five,
+.p7.margins .one-five {
+	width:71.15%;
+	float:left;
+}
+.f7.margins .one-six,
+.p7.margins .one-six {
+	width:85.58%;
+	float:left;
+}
+.f7.margins .two,
+.p7.margins .two {
+	width:13.43%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .two-three,
+.p7.margins .two-three {
+	width:27.86%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .two-four,
+.p7.margins .two-four {
+	width:42.29%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .two-five,
+.p7.margins .two-five {
+	width:56.72%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .two-six,
+.p7.margins .two-six {
+	width:71.15%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .two-seven,
+.p7.margins .two-seven {
+	width:85.58%;
+	margin-left:14.43%;
+}
+.f7.margins .three,
+.p7.margins .three {
+	width:13.43%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .three-four,
+.p7.margins .three-four {
+	width:27.86%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .three-five,
+.p7.margins .three-five {
+	width:42.29%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .three-six,
+.p7.margins .three-six {
+	width:56.72%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .three-seven,
+.p7.margins .three-seven {
+	width:71.15%;
+	margin-left:28.86%;
+}
+.f7.margins .four,
+.p7.margins .four {
+	width:13.43%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .four-five,
+.p7.margins .four-five {
+	width:27.86%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .four-seven,
+.p7.margins .four-seven {
+	width:56.72%;
+	margin-left:43.29%;
+}
+.f7.margins .five,
+.p7.margins .five {
+	width:13.43%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .five-seven,
+.p7.margins .five-seven {
+	width:42.29%;
+	margin-left:57.72%;
+}
+.f7.margins .six,
+.p7.margins .six {
+	width:13.43%;
+	margin-left:1%;
+	float:left;
+}
+.f7.margins .six-seven,
+.p7.margins .six-seven {
+	width:27.86%;
+	margin-left:72.15%;
+}
+.f7.margins .seven,
+.p7.margins .seven {
+	width:13.43%;
+	margin-left:86.57%;
+}
+
+/* 8 Columns - without margins */
+.f8 .one,
+.p8 .one {
+	width:12.5%;
+	float:left;
+}
+.f8 .one-two,
+.p8 .one-two {
+	width:25%;
+	float:left;
+}
+.f8 .one-three,
+.p8 .one-three {
+	width:37.5%;
+	float:left;
+}
+.f8 .one-four,
+.p8 .one-four {
+	width:50%;
+	float:left;
+}
+.f8 .one-five,
+.p8 .one-five {
+	width:62.5%;
+	float:left;
+}
+.f8 .one-six,
+.p8 .one-six {
+	width:75%;
+	float:left;
+}
+.f8 .one-seven,
+.p8 .one-seven {
+	width:87.5%;
+	float:left;
+}
+.f8 .two,
+.p8 .two {
+	width:12.5%;
+	float:left;
+}
+.f8 .two-three,
+.p8 .two-three {
+	width:25%;
+	float:left;
+}
+.f8 .two-four,
+.p8 .two-four {
+	width:37.5%;
+	float:left;
+}
+.f8 .two-five,
+.p8 .two-five {
+	width:50%;
+	float:left;
+}
+.f8 .two-six,
+.p8 .two-six {
+	width:62.5%;
+	float:left;
+}
+.f8 .two-seven,
+.p8 .two-seven {
+	width:75%;
+	float:left;
+}
+.f8 .two-eight,
+.p8 .two-eight {
+	width:87.5%;
+	margin-left:12.5%;
+}
+.f8 .three,
+.p8 .three {
+	width:12.5%;
+	float:left;
+}
+.f8 .three-four,
+.p8 .three-four {
+	width:25%;
+	float:left;
+}
+.f8 .three-five,
+.p8 .three-five {
+	width:37.7%;
+	float:left;
+}
+.f8 .three-six,
+.p8 .three-six {
+	width:50%;
+	float:left;
+}
+.f8 .three-seven,
+.p8 .three-seven {
+	width:62.5%;
+	float:left;
+}
+.f8 .three-eight,
+.p8 .three-eight {
+	width:75%;
+	margin-left:25%;
+}
+.f8 .four,
+.p8 .four {
+	width:12.5%;
+	float:left;
+}
+.f8 .four-five,
+.p8 .four-five {
+	width:25%;
+	float:left;
+}
+.f8 .four-six,
+.p8 .four-six {
+	width:37.5%;
+	float:left;
+}
+.f8 .four-seven,
+.p8 .four-seven {
+	width:50%;
+	float:left;
+}
+.f8 .four-eight,
+.p8 .four-eight {
+	width:62.5%;
+	margin-left:37.5%;
+}
+.f8 .five,
+.p8 .five {
+	width:12.5%;
+	float:left;
+}
+.f8 .five-six,
+.p8 .five-six {
+	width:25%;
+	float:left;
+}
+.f8 .five-seven,
+.p8 .five-seven {
+	width:37.5%;
+	float:left;
+}
+.f8 .five-eight,
+.p8 .five-eight {
+	width:50%;
+	margin-left:50%;
+}
+.f8 .six,
+.p8 .six {
+	width:12.5%;
+	float:left;
+}
+.f8 .six-seven,
+.p8 .six-seven {
+	width:25%;
+	float:left;
+}
+.f8 .six-eight,
+.p8 .six-eight {
+	width:37.5%;
+	margin-left:62.5%;
+}
+.f8 .seven,
+.p8 .seven {
+	width:12.5%;
+	float:left;
+}
+.f8 .seven-eight,
+.p8 .seven-eight {
+	width:25%;
+	margin-left:75%;
+}
+.f8 .eight,
+.p8 .eight {
+	width:12.5%;
+	margin-left:87.5%;
+}
+/* 8 Columns - with margins */
+.f8.margins .one,
+.p8.margins .one {
+	width:11.625%;
+	float:left;
+}
+.f8.margins .one-two,
+.p8.margins .one-two {
+	width:24.25%;
+	float:left;
+}
+.f8.margins .one-three,
+.p8.margins .one-three {
+	width:36.875%;
+	float:left;
+}
+.f8.margins .one-four,
+.p8.margins .one-four {
+	width:49.5%;
+	float:left;
+}
+.f8.margins .one-five,
+.p8.margins .one-five {
+	width:62.125%;
+	float:left;
+}
+.f8.margins .one-six,
+.p8.margins .one-six {
+	width:74.75%;
+	float:left;
+}
+.f8.margins .one-seven,
+.p8.margins .one-seven {
+	width:87.375%;
+	float:left;
+}
+.f8.margins .two,
+.p8.margins .two {
+	width:11.625%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .two-three,
+.p8.margins .two-three {
+	width:24.25%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .two-four,
+.p8.margins .two-four {
+	width:36.875%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .two-five,
+.p8.margins .two-five {
+	width:49.5%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .two-six,
+.p8.margins .two-six {
+	width:62.125%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .two-seven,
+.p8.margins .two-seven {
+	width:74.75%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .two-eight,
+.p8.margins .two-eight {
+	width:87.375%;
+	margin-left:12.625%;
+}
+.f8.margins .three,
+.p8.margins .three {
+	width:11.625%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .three-four,
+.p8.margins .three-four {
+	width:24.25%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .three-five,
+.p8.margins .three-five {
+	width:36.875%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .three-six,
+.p8.margins .three-six {
+	width:49.5%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .three-seven,
+.p8.margins .three-seven {
+	width:62.125%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .three-eight,
+.p8.margins .three-eight {
+	width:74.75%;
+	margin-left:25.25%;
+}
+.f8.margins .four,
+.p8.margins .four {
+	width:11.625%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .four-five,
+.p8.margins .four-five {
+	width:24.25%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .four-six,
+.p8.margins .four-six {
+	width:36.875%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .four-seven,
+.p8.margins .four-seven {
+	width:49.5%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .four-eight,
+.p8.margins .four-eight {
+	width:62.125%;
+	margin-left:37.875%;
+}
+.f8.margins .five,
+.p8.margins .five {
+	width:11.625%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .five-six,
+.p8.margins .five-six {
+	width:24.25%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .five-seven,
+.p8.margins .five-seven {
+	width:36.875%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .five-eight,
+.p8.margins .five-eight {
+	width:49.5%;
+	margin-left:50.5%;
+}
+.f8.margins .six,
+.p8.margins .six {
+	width:11.625%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .six-seven,
+.p8.margins .six-seven {
+	width:24.25%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .six-eight,
+.p8.margins .six-eight {
+	width:36.875%;
+	margin-left:63.125%;
+}
+.f8.margins .seven,
+.p8.margins .seven {
+	width:11.625%;
+	margin-left:1%;
+	float:left;
+}
+.f8.margins .seven-eight,
+.p8.margins .seven-eight {
+	width:24.25%;
+	margin-left:75.75%;
+}
+.f8.margins .eight,
+.p8.margins .eight {
+	width:11.625%;
+	margin-left:88.375%;
+}
+
+/* 02. iPad Landscape + higher */
+@media screen and (min-width: 1024px) {
+
+.f1, .f2, .f3, .f4, .f5, .f6, .f7, .f8 {
+	width:980px;
+}
+
+}
+
+/* 03. iPad Portrait */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+.f1, .f2, .f3, .f4, .f5, .f6, .f7, .f8 {
+	width:730px;
+}
+
+}
+
+/* 04. iPhone Landscape + Stacking to 2 columns or force to 1 column */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+.f1, .f2, .f3, .f4, .f5, .f6, .f7, .f8 {
+	width:450px;
+}
+
+/* 2 Columns - Stacked to 2 columns */
+.f2.stack .one,
+.p2.stack .one {
+	width:50%;
+	float:left;
+}
+.f2.stack .two,
+.p2.stack .two {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+
+/* 3 Columns - with margins - stacked to 2 columns */
+.f2.stack.margins .one,
+.p2.stack.margins .one {
+	width:49%;
+	float:left;
+}
+.f2.stack.margins .two,
+.p2.stack.margins .two {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+
+/* 3 Columns - Stacked to 2 columns */
+.f3.stack .one,
+.p3.stack .one,
+.f3.stack .one-two,
+.p3.stack .one-two {
+	width:50%;
+	float:left;
+}
+.f3.stack .two,
+.p3.stack .two,
+.f3.stack .two-three,
+.p3.stack .two-three {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f3.stack .three,
+.p3.stack .three {
+	width:100%;
+	margin-left:0;
+}
+
+/* 3 Columns - with margins - stacked to 2 columns */
+.f3.stack.margins .one,
+.p3.stack.margins .one,
+.f3.stack.margins .one-two,
+.p3.stack.margins .one-two {
+	width:49%;
+	float:left;
+}
+.f3.stack.margins .two,
+.p3.stack.margins .two,
+.f3.stack.margins .two-three,
+.p3.stack.margins .two-three {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f3.stack.margins .three,
+.p3.stack.margins .three {
+	width:100%;
+	margin-left:0;
+}
+
+/* 4 Columns - without margins - stacked to 2 columns */
+.f4.stack .one,
+.p4.stack .one,
+.f4.stack .one-two,
+.p4.stack .one-two,
+.f4.stack .one-three,
+.p4.stack .one-three {
+	width:50%;
+	float:left;
+}
+.f4.stack .two,
+.p4.stack .two,
+.f4.stack .two-three,
+.p4.stack .two-three,
+.f4.stack .two-four,
+.p4.stack .two-four {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f4.stack .three,
+.p4.stack .three {
+	width:50%;
+	float:left;
+}
+.f4.stack .three-four,
+.p4.stack .three-four {
+	width:100%;
+	margin-left:0;
+}
+.f4.stack .four,
+.p4.stack .four {
+	width:50%;
+	margin-left:50%;
+}
+
+/* 4 Columns - with margins - stacked to 2 columns */
+.f4.stack.margins .one,
+.p4.stack.margins .one,
+.f4.stack.margins .one-two,
+.p4.stack.margins .one-two,
+.f4.stack.margins .one-three,
+.p4.stack.margins .one-three {
+	width:49%;
+	float:left;
+}
+.f4.stack.margins .two,
+.p4.stack.margins .two,
+.f4.stack.margins .two-three,
+.p4.stack.margins .two-three,
+.f4.stack.margins .two-four,
+.p4.stack.margins .two-four {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f4.stack.margins .three,
+.p4.stack.margins .three {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f4.stack.margins .three-four,
+.p4.stack.margins .three-four {
+	width:100%;
+	margin-left:0;
+}
+.f4.stack.margins .four,
+.p4.stack.margins .four {
+	width:49%;
+	margin-left:51%;
+}
+
+/* 5 Columns - without margins - stacked to 2 columns */
+.f5.stack .one,
+.p5.stack .one,
+.f5.stack .one-two,
+.p5.stack .one-two,
+.f5.stack .one-three,
+.p5.stack .one-three,
+.f5.stack .one-four,
+.p5.stack .one-four {
+	width:50%;
+	float:left;
+}
+.f5.stack .two,
+.p5.stack .two,
+.f5.stack .two-three,
+.p5.stack .two-three,
+.f5.stack .two-four,
+.p5.stack .two-four,
+.f5.stack .two-five,
+.p5.stack .two-five {
+	width:50%;
+	float:none;
+	margin-left:50%;
+}
+.f5.stack .three,
+.p5.stack .three {
+	width:50%;
+	margin-left:0;
+	float:left;
+}
+.f5.stack .three-four,
+.p5.stack .three-four,
+.f5.stack .three-five,
+.p5.stack .three-five {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f5.stack .four,
+.p5.stack .four,
+.f5.stack .four-five,
+.p5.stack .four-five {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f5.stack .five,
+.p5.stack .five {
+	width:100%;
+	margin-left:0;
+}
+.f5.stack .two-three + .four-five,
+.p5.stack .two-three + .four-five {
+	width:100%;
+	margin-left:0;
+}
+
+/* 5 Columns - with margins - stacked to 2 columns */
+.f5.stack.margins .one,
+.p5.stack.margins .one,
+.f5.stack.margins .one-two,
+.p5.stack.margins .one-two,
+.f5.stack.margins .one-three,
+.p5.stack.margins .one-three,
+.f5.stack.margins .one-four,
+.p5.stack.margins .one-four {
+	width:49%;
+	float:left;
+}
+.f5.stack.margins .two,
+.p5.stack.margins .two,
+.f5.stack.margins .two-three,
+.p5.stack.margins .two-three,
+.f5.stack.margins .two-four,
+.p5.stack.margins .two-four,
+.f5.stack.margins .two-five,
+.p5.stack.margins .two-five {
+	width:49%;
+	float:none;
+	margin-left:51%;
+}
+.f5.stack.margins .three,
+.p5.stack.margins .three {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f5.stack.margins .three-four,
+.p5.stack.margins .three-four,
+.f5.stack.margins .three-five,
+.p5.stack.margins .three-five {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f5.stack.margins .four,
+.p5.stack.margins .four,
+.f5.stack.margins .four-five,
+.p5.stack.margins .four-five {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f5.stack.margins .five,
+.p5.stack.margins .five {
+	width:100%;
+	margin-left:0;
+}
+.f5.stack.margins .two-three + .four-five,
+.p5.stack.margins .two-three + .four-five {
+	width:100%;
+	margin-left:0;
+}
+
+/* 6 Columns - without margins - stacked to 2 columns */
+.f6.stack .one,
+.p6.stack .one,
+.f6.stack .one-two,
+.p6.stack .one-two,
+.f6.stack .one-three,
+.p6.stack .one-three,
+.f6.stack .one-four,
+.p6.stack .one-four,
+.f6.stack .one-five,
+.p6.stack .one-five {
+	width:50%;
+	float:left;
+}
+.f6.stack .two,
+.p6.stack .two,
+.f6.stack .two-three,
+.p6.stack .two-three,
+.f6.stack .two-four,
+.p6.stack .two-four,
+.f6.stack .two-five,
+.p6.stack .two-five,
+.f6.stack .two-six,
+.p6.stack .two-six {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f6.stack .three,
+.p6.stack .three {
+	width:50%;
+	float:left;
+}
+.f6.stack .three-four,
+.p6.stack .three-four,
+.f6.stack .three-five,
+.p6.stack .three-five,
+.f6.stack .three-six,
+.p6.stack .three-six {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f6.stack .four,
+.p6.stack .four,
+.f6.stack .four-five,
+.p6.stack .four-five,
+.f6.stack .four-six,
+.p6.stack .four-six {
+	width:50%;
+	float:none;
+	margin-left:50%;
+}
+.f6.stack .five,
+.p6.stack .five {
+	width:50%;
+	float:left;
+}
+.f6.stack .five-six,
+.p6.stack .five-six,
+.f6.stack .six,
+.p6.stack .six {
+	width:50%;
+	margin-left:50%;
+}
+.f6.stack .two-three + .four-six,
+.p6.stack .two-three + .four-six,
+.f6.stack .two-four + .five-six,
+.p6.stack .two-four + .five-six,
+.f6.stack .two-five + .six,
+.p6.stack .two-five + .six,
+.f6.stack .three-four + .five-six,
+.p6.stack .three-four + .five-six,
+.f6.stack .three-five + .six,
+.p6.stack .three-five + .six,
+.f6.stack .four-five + .six,
+.p6.stack .four-five + .six {
+	margin-left:0;
+	width:100%;
+}
+
+/* 6 Columns - with margins - stacked to 2 columns */
+.f6.stack.margins .one,
+.p6.stack.margins .one,
+.f6.stack.margins .one-two,
+.p6.stack.margins .one-two,
+.f6.stack.margins .one-three,
+.p6.stack.margins .one-three,
+.f6.stack.margins .one-four,
+.p6.stack.margins .one-four,
+.f6.stack.margins .one-five,
+.p6.stack.margins .one-five {
+	width:49%;
+	float:left;
+}
+.f6.stack.margins .two,
+.p6.stack.margins .two,
+.f6.stack.margins .two-three,
+.p6.stack.margins .two-three,
+.f6.stack.margins .two-four,
+.p6.stack.margins .two-four,
+.f6.stack.margins .two-five,
+.p6.stack.margins .two-five,
+.f6.stack.margins .two-six,
+.p6.stack.margins .two-six {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f6.stack.margins .three,
+.p6.stack.margins .three {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f6.stack.margins .three-four,
+.p6.stack.margins .three-four,
+.f6.stack.margins .three-five,
+.p6.stack.margins .three-five,
+.f6.stack.margins .three-six,
+.p6.stack.margins .three-six {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f6.stack.margins .four,
+.p6.stack.margins .four,
+.f6.stack.margins .four-five,
+.p6.stack.margins .four-five,
+.f6.stack.margins .four-six,
+.p6.stack.margins .four-six {
+	width:49%;
+	float:none;
+	margin-left:51%;
+}
+.f6.stack.margins .five,
+.p6.stack.margins .five {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f6.stack.margins .five-six,
+.p6.stack.margins .five-six,
+.f6.stack.margins .six,
+.p6.stack.margins .six {
+	width:49%;
+	margin-left:51%;
+}
+.f6.stack.margins .two-three + .four-six,
+.p6.stack.margins .two-three + .four-six,
+.f6.stack.margins .two-four + .five-six,
+.p6.stack.margins .two-four + .five-six,
+.f6.stack.margins .two-five + .six,
+.p6.stack.margins .two-five + .six,
+.f6.stack.margins .three-four + .five-six,
+.p6.stack.margins .three-four + .five-six,
+.f6.stack.margins .three-five + .six,
+.p6.stack.margins .three-five + .six,
+.f6.stack.margins .four-five + .six,
+.p6.stack.margins .four-five + .six {
+	margin-left:0;
+	width:100%;
+}
+
+/* 7 Columns - without margins - stacked to 2 columns */
+.f7.stack .one,
+.p7.stack .one,
+.f7.stack .one-two,
+.p7.stack .one-two,
+.f7.stack .one-three,
+.p7.stack .one-three,
+.f7.stack .one-four,
+.p7.stack .one-four,
+.f7.stack .one-five,
+.p7.stack .one-five,
+.f7.stack .one-six,
+.p7.stack .one-six {
+	width:50%;
+	float:left;
+}
+.f7.stack .two,
+.p7.stack .two,
+.f7.stack .two-three,
+.p7.stack .two-three,
+.f7.stack .two-four,
+.p7.stack .two-four,
+.f7.stack .two-five,
+.p7.stack .two-five,
+.f7.stack .two-six,
+.p7.stack .two-six {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f7.stack .two-seven,
+.p7.stack .two-seven {
+	width:50%;
+	float:none;
+	margin-left:50%;
+}
+.f7.stack .three,
+.p7.stack .three {
+	width:50%;
+	float:left;
+}
+.f7.stack .three-four,
+.p7.stack .three-four {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f7.stack .three-five,
+.p7.stack .three-five {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f7.stack .three-six,
+.p7.stack .three-six,
+.f7.stack .three-seven,
+.p7.stack .three-seven {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f7.stack .four,
+.p7.stack .four,
+.f7.stack .four-five,
+.p7.stack .four-five,
+.f7.stack .four-seven,
+.p7.stack .four-seven {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f7.stack .five,
+.p7.stack .five {
+	width:50%;
+	float:left;
+}
+.f7.stack .five-seven,
+.p7.stack .five-seven {
+	width:50%;
+	margin-left:50%;
+}
+.f7.stack .six,
+.p7.stack .six {
+	width:50%;
+	float:none;
+	margin-left:50%;
+}
+.f7.stack .six-seven,
+.p7.stack .six-seven {
+	width:50%;
+	float:none;
+	margin-left:50%;
+}
+.f7.stack .seven,
+.p7.stack .seven {
+	width:100%;
+	margin-left:0;
+}
+.f7.stack .two-three + .four-seven,
+.p7.stack .two-three + .four-seven,
+.f7.stack .two-four + .five-seven,
+.p7.stack .two-four + .five-seven,
+.f7.stack .two-five + .six-seven,
+.p7.stack .two-five + .six-seven,
+.f7.stack .three-four + .five-seven,
+.p7.stack .three-four + .five-seven,
+.f7.stack .three-five + .six-seven,
+.p7.stack .three-five + .six-seven,
+.f7.stack .four-five + .six-seven,
+.p7.stack .four-five + .six-seven {
+	margin-left:0;
+	width:100%;
+}
+/* 7 Columns - with margins - stacked to 2 columns */
+.f7.stack.margins .one,
+.p7.stack.margins .one,
+.f7.stack.margins .one-two,
+.p7.stack.margins .one-two,
+.f7.stack.margins .one-three,
+.p7.stack.margins .one-three,
+.f7.stack.margins .one-four,
+.p7.stack.margins .one-four,
+.f7.stack.margins .one-five,
+.p7.stack.margins .one-five,
+.f7.stack.margins .one-six,
+.p7.stack.margins .one-six {
+	width:49%;
+	float:left;
+}
+.f7.stack.margins .two,
+.p7.stack.margins .two,
+.f7.stack.margins .two-three,
+.p7.stack.margins .two-three,
+.f7.stack.margins .two-four,
+.p7.stack.margins .two-four,
+.f7.stack.margins .two-five,
+.p7.stack.margins .two-five,
+.f7.stack.margins .two-six,
+.p7.stack.margins .two-six {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f7.stack.margins .two-seven,
+.p7.stack.margins .two-seven {
+	width:49%;
+	float:none;
+	margin-left:51%;
+}
+.f7.stack.margins .three,
+.p7.stack.margins .three {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f7.stack.margins .three-four,
+.p7.stack.margins .three-four {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f7.stack.margins .three-five,
+.p7.stack.margins .three-five {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f7.stack.margins .three-six,
+.p7.stack.margins .three-six,
+.f7.stack.margins .three-seven,
+.p7.stack.margins .three-seven {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f7.stack.margins .four,
+.p7.stack.margins .four,
+.f7.stack.margins .four-five,
+.p7.stack.margins .four-five,
+.f7.stack.margins .four-seven,
+.p7.stack.margins .four-seven {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f7.stack.margins .five,
+.p7.stack.margins .five {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f7.stack.margins .five-seven,
+.p7.stack.margins .five-seven {
+	width:49%;
+	margin-left:51%;
+}
+.f7.stack.margins .six,
+.p7.stack.margins .six {
+	width:49%;
+	float:none;
+	margin-left:51%;
+}
+.f7.stack.margins .six-seven,
+.p7.stack.margins .six-seven {
+	width:49%;
+	float:none;
+	margin-left:51%;
+}
+.f7.stack.margins .seven,
+.p7.stack.margins .seven {
+	width:100%;
+	margin-left:0;
+}
+.f7.stack.margins .two-three + .four-seven,
+.p7.stack.margins .two-three + .four-seven,
+.f7.stack.margins .two-four + .five-seven,
+.p7.stack.margins .two-four + .five-seven,
+.f7.stack.margins .two-five + .six-seven,
+.p7.stack.margins .two-five + .six-seven,
+.f7.stack.margins .three-four + .five-seven,
+.p7.stack.margins .three-four + .five-seven,
+.f7.stack.margins .three-five + .six-seven,
+.p7.stack.margins .three-five + .six-seven,
+.f7.stack.margins .four-five + .six-seven,
+.p7.stack.margins .four-five + .six-seven {
+	margin-left:0;
+	width:100%;
+}
+
+/* 8 Columns - without margins - stacked to 2 columns */
+.f8.stack .one,
+.p8.stack .one,
+.f8.stack .one-two,
+.p8.stack .one-two,
+.f8.stack .one-three,
+.p8.stack .one-three,
+.f8.stack .one-four,
+.p8.stack .one-four,
+.f8.stack .one-five,
+.p8.stack .one-five,
+.f8.stack .one-six,
+.p8.stack .one-six,
+.f8.stack .one-seven,
+.p8.stack .one-seven {
+	width:50%;
+	float:left;
+}
+.f8.stack .two,
+.p8.stack .two,
+.f8.stack .two-three,
+.p8.stack .two-three,
+.f8.stack .two-four,
+.p8.stack .two-four,
+.f8.stack .two-five,
+.p8.stack .two-five,
+.f8.stack .two-six,
+.p8.stack .two-six,
+.f8.stack .two-seven,
+.p8.stack .two-seven,
+.f8.stack .two-eight,
+.p8.stack .two-eight {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f8.stack .three,
+.p8.stack .three {
+	width:50%;
+	float:left;
+}
+.f8.stack .three-four,
+.p8.stack .three-four,
+.f8.stack .three-five,
+.p8.stack .three-five,
+.f8.stack .three-six,
+.p8.stack .three-six {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f8.stack .three-seven,
+.p8.stack .three-seven {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f8.stack .three-eight,
+.p8.stack .three-eight {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f8.stack .four,
+.p8.stack .four,
+.f8.stack .four-five,
+.p8.stack .four-five,
+.f8.stack .four-six,
+.p8.stack .four-six,
+.f8.stack .four-seven,
+.p8.stack .four-seven,
+.f8.stack .four-eight,
+.p8.stack .four-eight {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f8.stack .five,
+.p8.stack .five {
+	width:50%;
+	float:left;
+}
+.f8.stack .five-six,
+.p8.stack .five-six,
+.f8.stack .five-seven,
+.p8.stack .five-seven,
+.f8.stack .five-eight,
+.p8.stack .five-eight {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f8.stack .six,
+.p8.stack .six,
+.f8.stack .six-seven,
+.p8.stack .six-seven,
+.f8.stack .six-eight,
+.p8.stack .six-eight {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f8.stack .seven,
+.p8.stack .seven {
+	width:50%;
+	float:left;
+}
+.f8.stack .seven-eight,
+.p8.stack .seven-eight {
+	width:50%;
+	margin-left:50%;
+	float:none;
+}
+.f8.stack .eight,
+.p8.stack .eight {
+	width:50%;
+	margin-left:50%;
+}
+.f8.stack .two-three + .four-five,
+.p8.stack .two-three + .four-five {
+	width:50%;
+	margin-left:0;
+	float:left;
+}
+.f8.stack .two-four + .five-eight,
+.p8.stack .two-four + .five-eight,
+.f8.stack .two-five + .six-eight,
+.p8.stack .two-five + .six-eight,
+.f8.stack .two-six + .seven-eight,
+.p8.stack .two-six + .seven-eight,
+.f8.stack .two-seven + .eight,
+.p8.stack .two-seven + .eight,
+.f8.stack .three-four + .five-eight,
+.p8.stack .three-four + .five-eight,
+.f8.stack .three-five + .six-eight,
+.p8.stack .three-five + .six-eight,
+.f8.stack .three-six + .seven-eight,
+.p8.stack .three-six + .seven-eight,
+.f8.stack .three-seven + .eight,
+.p8.stack .three-seven + .eight,
+.f8.stack .four-five + .six-eight,
+.p8.stack .four-five + .six-eight,
+.f8.stack .four-six + .seven-eight,
+.p8.stack .four-six + .seven-eight,
+.f8.stack .four-seven + .eight,
+.p8.stack .four-seven + .eight,
+.f8.stack .five-six + .seven-eight,
+.p8.stack .five-six + .seven-eight,
+.f8.stack .five-seven + .eight,
+.p8.stack .five-seven + .eight,
+.f8.stack .six-seven + .eight,
+.p8.stack .six-seven + .eight {
+	width:100%;
+	margin-left:0;
+}
+
+/* 8 Columns - with margins - stacked to 2 columns */
+.f8.stack.margins .one,
+.p8.stack.margins .one,
+.f8.stack.margins .one-two,
+.p8.stack.margins .one-two,
+.f8.stack.margins .one-three,
+.p8.stack.margins .one-three,
+.f8.stack.margins .one-four,
+.p8.stack.margins .one-four,
+.f8.stack.margins .one-five,
+.p8.stack.margins .one-five,
+.f8.stack.margins .one-six,
+.p8.stack.margins .one-six,
+.f8.stack.margins .one-seven,
+.p8.stack.margins .one-seven {
+	width:49%;
+	float:left;
+}
+.f8.stack.margins .two,
+.p8.stack.margins .two,
+.f8.stack.margins .two-three,
+.p8.stack.margins .two-three,
+.f8.stack.margins .two-four,
+.p8.stack.margins .two-four,
+.f8.stack.margins .two-five,
+.p8.stack.margins .two-five,
+.f8.stack.margins .two-six,
+.p8.stack.margins .two-six,
+.f8.stack.margins .two-seven,
+.p8.stack.margins .two-seven,
+.f8.stack.margins .two-eight,
+.p8.stack.margins .two-eight {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f8.stack.margins .three,
+.p8.stack.margins .three {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f8.stack.margins .three-four,
+.p8.stack.margins .three-four,
+.f8.stack.margins .three-five,
+.p8.stack.margins .three-five,
+.f8.stack.margins .three-six,
+.p8.stack.margins .three-six {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f8.stack.margins .three-seven,
+.p8.stack.margins .three-seven {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f8.stack.margins .three-eight,
+.p8.stack.margins .three-eight {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f8.stack.margins .four,
+.p8.stack.margins .four,
+.f8.stack.margins .four-five,
+.p8.stack.margins .four-five,
+.f8.stack.margins .four-six,
+.p8.stack.margins .four-six,
+.f8.stack.margins .four-seven,
+.p8.stack.margins .four-seven,
+.f8.stack.margins .four-eight,
+.p8.stack.margins .four-eight {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f8.stack.margins .five,
+.p8.stack.margins .five {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f8.stack.margins .five-six,
+.p8.stack.margins .five-six,
+.f8.stack.margins .five-seven,
+.p8.stack.margins .five-seven,
+.f8.stack.margins .five-eight,
+.p8.stack.margins .five-eight {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f8.stack.margins .six,
+.p8.stack.margins .six,
+.f8.stack.margins .six-seven,
+.p8.stack.margins .six-seven,
+.f8.stack.margins .six-eight,
+.p8.stack.margins .six-eight {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f8.stack.margins .seven,
+.p8.stack.margins .seven {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f8.stack.margins .seven-eight,
+.p8.stack.margins .seven-eight {
+	width:49%;
+	margin-left:51%;
+	float:none;
+}
+.f8.stack.margins .eight,
+.p8.stack.margins .eight {
+	width:49%;
+	margin-left:51%;
+}
+.f8.stack.margins .two-three + .four-five,
+.p8.stack.margins .two-three + .four-five {
+	width:49%;
+	margin-left:0;
+	float:left;
+}
+.f8.stack.margins .two-four + .five-eight,
+.p8.stack.margins .two-four + .five-eight,
+.f8.stack.margins .two-five + .six-eight,
+.p8.stack.margins .two-five + .six-eight,
+.f8.stack.margins .two-six + .seven-eight,
+.p8.stack.margins .two-six + .seven-eight,
+.f8.stack.margins .two-seven + .eight,
+.p8.stack.margins .two-seven + .eight,
+.f8.stack.margins .three-four + .five-eight,
+.p8.stack.margins .three-four + .five-eight,
+.f8.stack.margins .three-five + .six-eight,
+.p8.stack.margins .three-five + .six-eight,
+.f8.stack.margins .three-six + .seven-eight,
+.p8.stack.margins .three-six + .seven-eight,
+.f8.stack.margins .three-seven + .eight,
+.p8.stack.margins .three-seven + .eight,
+.f8.stack.margins .four-five + .six-eight,
+.p8.stack.margins .four-five + .six-eight,
+.f8.stack.margins .four-six + .seven-eight,
+.p8.stack.margins .four-six + .seven-eight,
+.f8.stack.margins .four-seven + .eight,
+.p8.stack.margins .four-seven + .eight,
+.f8.stack.margins .five-six + .seven-eight,
+.p8.stack.margins .five-six + .seven-eight,
+.f8.stack.margins .five-seven + .eight,
+.p8.stack.margins .five-seven + .eight,
+.f8.stack.margins .six-seven + .eight,
+.p8.stack.margins .six-seven + .eight {
+	width:100%;
+	margin-left:0;
+}
+
+}
+
+/* 05. iPhone Portrait + Stacking to 1 column */
+@media screen and (max-width: 767px) {
+
+/* All columns stacked to 1 column below 767 width */
+.f2.stack1 .one,
+.p2.stack1 .one,
+.f2.stack1 .two,
+.p2.stack1 .two,
+.f2.stack1.margins .one,
+.p2.stack1.margins .one,
+.f2.stack1.margins .two,
+.p2.stack1.margins .two,
+.f3.stack1 .one,
+.p3.stack1 .one,
+.f3.stack1 .one-two,
+.p3.stack1 .one-two,
+.f3.stack1 .two,
+.p3.stack1 .two,
+.f3.stack1 .two-three,
+.p3.stack1 .two-three,
+.f3.stack1 .three,
+.p3.stack1 .three,
+.f3.stack1.margins .one,
+.p3.stack1.margins .one,
+.f3.stack1.margins .one-two,
+.p3.stack1.margins .one-two,
+.f3.stack1.margins .two,
+.p3.stack1.margins .two,
+.f3.stack1.margins .two-three,
+.p3.stack1.margins .two-three,
+.f3.stack1.margins .three,
+.p3.stack1.margins .three,
+.f4.stack1 .one,
+.p4.stack1 .one,
+.f4.stack1 .one-two,
+.p4.stack1 .one-two,
+.f4.stack1 .one-three,
+.p4.stack1 .one-three,
+.f4.stack1 .two,
+.p4.stack1 .two,
+.f4.stack1 .two-three,
+.p4.stack1 .two-three,
+.f4.stack1 .two-four,
+.p4.stack1 .two-four,
+.f4.stack1 .three,
+.p4.stack1 .three,
+.f4.stack1 .three-four,
+.p4.stack1 .three-four,
+.f4.stack1 .four,
+.p4.stack1 .four,
+.f4.stack1.margins .one,
+.p4.stack1.margins .one,
+.f4.stack1.margins .one-two,
+.p4.stack1.margins .one-two,
+.f4.stack1.margins .one-three,
+.p4.stack1.margins .one-three,
+.f4.stack1.margins .two,
+.p4.stack1.margins .two,
+.f4.stack1.margins .two-three,
+.p4.stack1.margins .two-three,
+.f4.stack1.margins .two-four,
+.p4.stack1.margins .two-four,
+.f4.stack1.margins .three,
+.p4.stack1.margins .three,
+.f4.stack1.margins .three-four,
+.p4.stack1.margins .three-four,
+.f4.stack1.margins .four,
+.p4.stack1.margins .four,
+.f5.stack1 .one,
+.p5.stack1 .one,
+.f5.stack1 .one-two,
+.p5.stack1 .one-two,
+.f5.stack1 .one-three,
+.p5.stack1 .one-three,
+.f5.stack1 .one-four,
+.p5.stack1 .one-four,
+.f5.stack1 .two,
+.p5.stack1 .two,
+.f5.stack1 .two-three,
+.p5.stack1 .two-three,
+.f5.stack1 .two-four,
+.p5.stack1 .two-four,
+.f5.stack1 .two-five,
+.p5.stack1 .two-five,
+.f5.stack1 .three,
+.p5.stack1 .three,
+.f5.stack1 .three-four,
+.p5.stack1 .three-four,
+.f5.stack1 .three-five,
+.p5.stack1 .three-five,
+.f5.stack1 .four,
+.p5.stack1 .four,
+.f5.stack1 .four-five,
+.p5.stack1 .four-five,
+.f5.stack1 .five,
+.p5.stack1 .five,
+.f5.stack1.margins .one,
+.p5.stack1.margins .one,
+.f5.stack1.margins .one-two,
+.p5.stack1.margins .one-two,
+.f5.stack1.margins .one-three,
+.p5.stack1.margins .one-three,
+.f5.stack1.margins .one-four,
+.p5.stack1.margins .one-four,
+.f5.stack1.margins .two,
+.p5.stack1.margins .two,
+.f5.stack1.margins .two-three,
+.p5.stack1.margins .two-three,
+.f5.stack1.margins .two-four,
+.p5.stack1.margins .two-four,
+.f5.stack1.margins .two-five,
+.p5.stack1.margins .two-five,
+.f5.stack1.margins .three,
+.p5.stack1.margins .three,
+.f5.stack1.margins .three-four,
+.p5.stack1.margins .three-four,
+.f5.stack1.margins .three-five,
+.p5.stack1.margins .three-five,
+.f5.stack1.margins .four,
+.p5.stack1.margins .four,
+.f5.stack1.margins .four-five,
+.p5.stack1.margins .four-five,
+.f5.stack1.margins .five,
+.p5.stack1.margins .five,
+.f6.stack1 .one,
+.p6.stack1 .one,
+.f6.stack1 .one-two,
+.p6.stack1 .one-two,
+.f6.stack1 .one-three,
+.p6.stack1 .one-three,
+.f6.stack1 .one-four,
+.p6.stack1 .one-four,
+.f6.stack1 .one-five,
+.p6.stack1 .one-five,
+.f6.stack1 .two,
+.p6.stack1 .two,
+.f6.stack1 .two-three,
+.p6.stack1 .two-three,
+.f6.stack1 .two-four,
+.p6.stack1 .two-four,
+.f6.stack1 .two-five,
+.p6.stack1 .two-five,
+.f6.stack1 .two-six,
+.p6.stack1 .two-six,
+.f6.stack1 .three,
+.p6.stack1 .three,
+.f6.stack1 .three-four,
+.p6.stack1 .three-four,
+.f6.stack1 .three-five,
+.p6.stack1 .three-five,
+.f6.stack1 .three-six,
+.p6.stack1 .three-six,
+.f6.stack1 .four,
+.p6.stack1 .four,
+.f6.stack1 .four-five,
+.p6.stack1 .four-five,
+.f6.stack1 .four-six,
+.p6.stack1 .four-six,
+.f6.stack1 .five,
+.p6.stack1 .five,
+.f6.stack1 .five-six,
+.p6.stack1 .five-six,
+.f6.stack1 .six,
+.p6.stack1 .six,
+.f6.stack1.margins .one,
+.p6.stack1.margins .one,
+.f6.stack1.margins .one-two,
+.p6.stack1.margins .one-two,
+.f6.stack1.margins .one-three,
+.p6.stack1.margins .one-three,
+.f6.stack1.margins .one-four,
+.p6.stack1.margins .one-four,
+.f6.stack1.margins .one-five,
+.p6.stack1.margins .one-five,
+.f6.stack1.margins .two,
+.p6.stack1.margins .two,
+.f6.stack1.margins .two-three,
+.p6.stack1.margins .two-three,
+.f6.stack1.margins .two-four,
+.p6.stack1.margins .two-four,
+.f6.stack1.margins .two-five,
+.p6.stack1.margins .two-five,
+.f6.stack1.margins .two-six,
+.p6.stack1.margins .two-six,
+.f6.stack1.margins .three,
+.p6.stack1.margins .three,
+.f6.stack1.margins .three-four,
+.p6.stack1.margins .three-four,
+.f6.stack1.margins .three-five,
+.p6.stack1.margins .three-five,
+.f6.stack1.margins .three-six,
+.p6.stack1.margins .three-six,
+.f6.stack1.margins .four,
+.p6.stack1.margins .four,
+.f6.stack1.margins .four-five,
+.p6.stack1.margins .four-five,
+.f6.stack1.margins .four-six,
+.p6.stack1.margins .four-six,
+.f6.stack1.margins .five,
+.p6.stack1.margins .five,
+.f6.stack1.margins .five-six,
+.p6.stack1.margins .five-six,
+.f6.stack1.margins .six,
+.p6.stack1.margins .six,
+.f7.stack1 .one,
+.p7.stack1 .one,
+.f7.stack1 .one-two,
+.p7.stack1 .one-two,
+.f7.stack1 .one-three,
+.p7.stack1 .one-three,
+.f7.stack1 .one-four,
+.p7.stack1 .one-four,
+.f7.stack1 .one-five,
+.p7.stack1 .one-five,
+.f7.stack1 .one-six,
+.p7.stack1 .one-six,
+.f7.stack1 .two,
+.p7.stack1 .two,
+.f7.stack1 .two-three,
+.p7.stack1 .two-three,
+.f7.stack1 .two-four,
+.p7.stack1 .two-four,
+.f7.stack1 .two-five,
+.p7.stack1 .two-five,
+.f7.stack1 .two-six,
+.p7.stack1 .two-six,
+.f7.stack1 .two-seven,
+.p7.stack1 .two-seven,
+.f7.stack1 .three,
+.p7.stack1 .three,
+.f7.stack1 .three-four,
+.p7.stack1 .three-four,
+.f7.stack1 .three-five,
+.p7.stack1 .three-five,
+.f7.stack1 .three-six,
+.p7.stack1 .three-six,
+.f7.stack1 .three-seven,
+.p7.stack1 .three-seven,
+.f7.stack1 .four,
+.p7.stack1 .four,
+.f7.stack1 .four-five,
+.p7.stack1 .four-five,
+.f7.stack1 .four-seven,
+.p7.stack1 .four-seven,
+.f7.stack1 .five,
+.p7.stack1 .five,
+.f7.stack1 .five-seven,
+.p7.stack1 .five-seven,
+.f7.stack1 .six,
+.p7.stack1 .six,
+.f7.stack1 .six-seven,
+.p7.stack1 .six-seven,
+.f7.stack1 .seven,
+.p7.stack1 .seven,
+.f7.stack1.margins .one,
+.p7.stack1.margins .one,
+.f7.stack1.margins .one-two,
+.p7.stack1.margins .one-two,
+.f7.stack1.margins .one-three,
+.p7.stack1.margins .one-three,
+.f7.stack1.margins .one-four,
+.p7.stack1.margins .one-four,
+.f7.stack1.margins .one-five,
+.p7.stack1.margins .one-five,
+.f7.stack1.margins .one-six,
+.p7.stack1.margins .one-six,
+.f7.stack1.margins .two,
+.p7.stack1.margins .two,
+.f7.stack1.margins .two-three,
+.p7.stack1.margins .two-three,
+.f7.stack1.margins .two-four,
+.p7.stack1.margins .two-four,
+.f7.stack1.margins .two-five,
+.p7.stack1.margins .two-five,
+.f7.stack1.margins .two-six,
+.p7.stack1.margins .two-six,
+.f7.stack1.margins .two-seven,
+.p7.stack1.margins .two-seven,
+.f7.stack1.margins .three,
+.p7.stack1.margins .three,
+.f7.stack1.margins .three-four,
+.p7.stack1.margins .three-four,
+.f7.stack1.margins .three-five,
+.p7.stack1.margins .three-five,
+.f7.stack1.margins .three-six,
+.p7.stack1.margins .three-six,
+.f7.stack1.margins .three-seven,
+.p7.stack1.margins .three-seven,
+.f7.stack1.margins .four,
+.p7.stack1.margins .four,
+.f7.stack1.margins .four-five,
+.p7.stack1.margins .four-five,
+.f7.stack1.margins .four-seven,
+.p7.stack1.margins .four-seven,
+.f7.stack1.margins .five,
+.p7.stack1.margins .five,
+.f7.stack1.margins .five-seven,
+.p7.stack1.margins .five-seven,
+.f7.stack1.margins .six,
+.p7.stack1.margins .six,
+.f7.stack1.margins .six-seven,
+.p7.stack1.margins .six-seven,
+.f7.stack1.margins .seven,
+.p7.stack1.margins .seven,
+.f8.stack1 .one,
+.p8.stack1 .one,
+.f8.stack1 .one-two,
+.p8.stack1 .one-two,
+.f8.stack1 .one-three,
+.p8.stack1 .one-three,
+.f8.stack1 .one-four,
+.p8.stack1 .one-four,
+.f8.stack1 .one-five,
+.p8.stack1 .one-five,
+.f8.stack1 .one-six,
+.p8.stack1 .one-six,
+.f8.stack1 .one-seven,
+.p8.stack1 .one-seven,
+.f8.stack1 .two,
+.p8.stack1 .two,
+.f8.stack1 .two-three,
+.p8.stack1 .two-three,
+.f8.stack1 .two-four,
+.p8.stack1 .two-four,
+.f8.stack1 .two-five,
+.p8.stack1 .two-five,
+.f8.stack1 .two-six,
+.p8.stack1 .two-six,
+.f8.stack1 .two-seven,
+.p8.stack1 .two-seven,
+.f8.stack1 .two-eight,
+.p8.stack1 .two-eight,
+.f8.stack1 .three,
+.p8.stack1 .three,
+.f8.stack1 .three-four,
+.p8.stack1 .three-four,
+.f8.stack1 .three-five,
+.p8.stack1 .three-five,
+.f8.stack1 .three-six,
+.p8.stack1 .three-six,
+.f8.stack1 .three-seven,
+.p8.stack1 .three-seven,
+.f8.stack1 .three-eight,
+.p8.stack1 .three-eight,
+.f8.stack1 .four,
+.p8.stack1 .four,
+.f8.stack1 .four-five,
+.p8.stack1 .four-five,
+.f8.stack1 .four-six,
+.p8.stack1 .four-six,
+.f8.stack1 .four-seven,
+.p8.stack1 .four-seven,
+.f8.stack1 .four-eight,
+.p8.stack1 .four-eight,
+.f8.stack1 .five,
+.p8.stack1 .five,
+.f8.stack1 .five-six,
+.p8.stack1 .five-six,
+.f8.stack1 .five-seven,
+.p8.stack1 .five-seven,
+.f8.stack1 .five-eight,
+.p8.stack1 .five-eight,
+.f8.stack1 .six,
+.p8.stack1 .six,
+.f8.stack1 .six-seven,
+.p8.stack1 .six-seven,
+.f8.stack1 .six-eight,
+.p8.stack1 .six-eight,
+.f8.stack1 .seven,
+.p8.stack1 .seven,
+.f8.stack1 .seven-eight,
+.p8.stack1 .seven-eight,
+.f8.stack1 .eight,
+.p8.stack1 .eight,
+.f8.stack1.margins .one,
+.p8.stack1.margins .one,
+.f8.stack1.margins .one-two,
+.p8.stack1.margins .one-two,
+.f8.stack1.margins .one-three,
+.p8.stack1.margins .one-three,
+.f8.stack1.margins .one-four,
+.p8.stack1.margins .one-four,
+.f8.stack1.margins .one-five,
+.p8.stack1.margins .one-five,
+.f8.stack1.margins .one-six,
+.p8.stack1.margins .one-six,
+.f8.stack1.margins .one-seven,
+.p8.stack1.margins .one-seven,
+.f8.stack1.margins .two,
+.p8.stack1.margins .two,
+.f8.stack1.margins .two-three,
+.p8.stack1.margins .two-three,
+.f8.stack1.margins .two-four,
+.p8.stack1.margins .two-four,
+.f8.stack1.margins .two-five,
+.p8.stack1.margins .two-five,
+.f8.stack1.margins .two-six,
+.p8.stack1.margins .two-six,
+.f8.stack1.margins .two-seven,
+.p8.stack1.margins .two-seven,
+.f8.stack1.margins .two-eight,
+.p8.stack1.margins .two-eight,
+.f8.stack1.margins .three,
+.p8.stack1.margins .three,
+.f8.stack1.margins .three-four,
+.p8.stack1.margins .three-four,
+.f8.stack1.margins .three-five,
+.p8.stack1.margins .three-five,
+.f8.stack1.margins .three-six,
+.p8.stack1.margins .three-six,
+.f8.stack1.margins .three-seven,
+.p8.stack1.margins .three-seven,
+.f8.stack1.margins .three-eight,
+.p8.stack1.margins .three-eight,
+.f8.stack1.margins .four,
+.p8.stack1.margins .four,
+.f8.stack1.margins .four-five,
+.p8.stack1.margins .four-five,
+.f8.stack1.margins .four-six,
+.p8.stack1.margins .four-six,
+.f8.stack1.margins .four-seven,
+.p8.stack1.margins .four-seven,
+.f8.stack1.margins .four-eight,
+.p8.stack1.margins .four-eight,
+.f8.stack1.margins .five,
+.p8.stack1.margins .five,
+.f8.stack1.margins .five-six,
+.p8.stack1.margins .five-six,
+.f8.stack1.margins .five-seven,
+.p8.stack1.margins .five-seven,
+.f8.stack1.margins .five-eight,
+.p8.stack1.margins .five-eight,
+.f8.stack1.margins .six,
+.p8.stack1.margins .six,
+.f8.stack1.margins .six-seven,
+.p8.stack1.margins .six-seven,
+.f8.stack1.margins .six-eight,
+.p8.stack1.margins .six-eight,
+.f8.stack1.margins .seven,
+.p8.stack1.margins .seven,
+.f8.stack1.margins .seven-eight,
+.p8.stack1.margins .seven-eight,
+.f8.stack1.margins .eight,
+.p8.stack1.margins .eight {
+	width:100%;
+	margin-left:0;
+	float:none;
+}
+
+}
+
+@media screen and (max-width: 479px) {
+
+.f1, .f2, .f3, .f4, .f5, .f6, .f7, .f8 {
+	width:280px;
+}
+
+/* Stack all columns to 1 */
+.f2.stack .one,
+.p2.stack .one,
+.f2.stack .two,
+.p2.stack .two,
+.f2.stack.margins .one,
+.p2.stack.margins .one,
+.f2.stack.margins .two,
+.p2.stack.margins .two,
+.f3.stack .one,
+.p3.stack .one,
+.f3.stack .one-two,
+.p3.stack .one-two,
+.f3.stack .two,
+.p3.stack .two,
+.f3.stack .two-three,
+.p3.stack .two-three,
+.f3.stack .three,
+.p3.stack .three,
+.f3.stack.margins .one,
+.p3.stack.margins .one,
+.f3.stack.margins .one-two,
+.p3.stack.margins .one-two,
+.f3.stack.margins .two,
+.p3.stack.margins .two,
+.f3.stack.margins .two-three,
+.p3.stack.margins .two-three,
+.f3.stack.margins .three,
+.p3.stack.margins .three,
+.f4.stack .one,
+.p4.stack .one,
+.f4.stack .one-two,
+.p4.stack .one-two,
+.f4.stack .one-three,
+.p4.stack .one-three,
+.f4.stack .two,
+.p4.stack .two,
+.f4.stack .two-three,
+.p4.stack .two-three,
+.f4.stack .two-four,
+.p4.stack .two-four,
+.f4.stack .three,
+.p4.stack .three,
+.f4.stack .three-four,
+.p4.stack .three-four,
+.f4.stack .four,
+.p4.stack .four,
+.f4.stack.margins .one,
+.p4.stack.margins .one,
+.f4.stack.margins .one-two,
+.p4.stack.margins .one-two,
+.f4.stack.margins .one-three,
+.p4.stack.margins .one-three,
+.f4.stack.margins .two,
+.p4.stack.margins .two,
+.f4.stack.margins .two-three,
+.p4.stack.margins .two-three,
+.f4.stack.margins .two-four,
+.p4.stack.margins .two-four,
+.f4.stack.margins .three,
+.p4.stack.margins .three,
+.f4.stack.margins .three-four,
+.p4.stack.margins .three-four,
+.f4.stack.margins .four,
+.p4.stack.margins .four,
+.f5.stack .one,
+.p5.stack .one,
+.f5.stack .one-two,
+.p5.stack .one-two,
+.f5.stack .one-three,
+.p5.stack .one-three,
+.f5.stack .one-four,
+.p5.stack .one-four,
+.f5.stack .two,
+.p5.stack .two,
+.f5.stack .two-three,
+.p5.stack .two-three,
+.f5.stack .two-four,
+.p5.stack .two-four,
+.f5.stack .two-five,
+.p5.stack .two-five,
+.f5.stack .three,
+.p5.stack .three,
+.f5.stack .three-four,
+.p5.stack .three-four,
+.f5.stack .three-five,
+.p5.stack .three-five,
+.f5.stack .four,
+.p5.stack .four,
+.f5.stack .four-five,
+.p5.stack .four-five,
+.f5.stack .five,
+.p5.stack .five,
+.f5.stack.margins .one,
+.p5.stack.margins .one,
+.f5.stack.margins .one-two,
+.p5.stack.margins .one-two,
+.f5.stack.margins .one-three,
+.p5.stack.margins .one-three,
+.f5.stack.margins .one-four,
+.p5.stack.margins .one-four,
+.f5.stack.margins .two,
+.p5.stack.margins .two,
+.f5.stack.margins .two-three,
+.p5.stack.margins .two-three,
+.f5.stack.margins .two-four,
+.p5.stack.margins .two-four,
+.f5.stack.margins .two-five,
+.p5.stack.margins .two-five,
+.f5.stack.margins .three,
+.p5.stack.margins .three,
+.f5.stack.margins .three-four,
+.p5.stack.margins .three-four,
+.f5.stack.margins .three-five,
+.p5.stack.margins .three-five,
+.f5.stack.margins .four,
+.p5.stack.margins .four,
+.f5.stack.margins .four-five,
+.p5.stack.margins .four-five,
+.f5.stack.margins .five,
+.p5.stack.margins .five,
+.f6.stack .one,
+.p6.stack .one,
+.f6.stack .one-two,
+.p6.stack .one-two,
+.f6.stack .one-three,
+.p6.stack .one-three,
+.f6.stack .one-four,
+.p6.stack .one-four,
+.f6.stack .one-five,
+.p6.stack .one-five,
+.f6.stack .two,
+.p6.stack .two,
+.f6.stack .two-three,
+.p6.stack .two-three,
+.f6.stack .two-four,
+.p6.stack .two-four,
+.f6.stack .two-five,
+.p6.stack .two-five,
+.f6.stack .two-six,
+.p6.stack .two-six,
+.f6.stack .three,
+.p6.stack .three,
+.f6.stack .three-four,
+.p6.stack .three-four,
+.f6.stack .three-five,
+.p6.stack .three-five,
+.f6.stack .three-six,
+.p6.stack .three-six,
+.f6.stack .four,
+.p6.stack .four,
+.f6.stack .four-five,
+.p6.stack .four-five,
+.f6.stack .four-six,
+.p6.stack .four-six,
+.f6.stack .five,
+.p6.stack .five,
+.f6.stack .five-six,
+.p6.stack .five-six,
+.f6.stack .six,
+.p6.stack .six,
+.f6.stack.margins .one,
+.p6.stack.margins .one,
+.f6.stack.margins .one-two,
+.p6.stack.margins .one-two,
+.f6.stack.margins .one-three,
+.p6.stack.margins .one-three,
+.f6.stack.margins .one-four,
+.p6.stack.margins .one-four,
+.f6.stack.margins .one-five,
+.p6.stack.margins .one-five,
+.f6.stack.margins .two,
+.p6.stack.margins .two,
+.f6.stack.margins .two-three,
+.p6.stack.margins .two-three,
+.f6.stack.margins .two-four,
+.p6.stack.margins .two-four,
+.f6.stack.margins .two-five,
+.p6.stack.margins .two-five,
+.f6.stack.margins .two-six,
+.p6.stack.margins .two-six,
+.f6.stack.margins .three,
+.p6.stack.margins .three,
+.f6.stack.margins .three-four,
+.p6.stack.margins .three-four,
+.f6.stack.margins .three-five,
+.p6.stack.margins .three-five,
+.f6.stack.margins .three-six,
+.p6.stack.margins .three-six,
+.f6.stack.margins .four,
+.p6.stack.margins .four,
+.f6.stack.margins .four-five,
+.p6.stack.margins .four-five,
+.f6.stack.margins .four-six,
+.p6.stack.margins .four-six,
+.f6.stack.margins .five,
+.p6.stack.margins .five,
+.f6.stack.margins .five-six,
+.p6.stack.margins .five-six,
+.f6.stack.margins .six,
+.p6.stack.margins .six,
+.f7.stack .one,
+.p7.stack .one,
+.f7.stack .one-two,
+.p7.stack .one-two,
+.f7.stack .one-three,
+.p7.stack .one-three,
+.f7.stack .one-four,
+.p7.stack .one-four,
+.f7.stack .one-five,
+.p7.stack .one-five,
+.f7.stack .one-six,
+.p7.stack .one-six,
+.f7.stack .two,
+.p7.stack .two,
+.f7.stack .two-three,
+.p7.stack .two-three,
+.f7.stack .two-four,
+.p7.stack .two-four,
+.f7.stack .two-five,
+.p7.stack .two-five,
+.f7.stack .two-six,
+.p7.stack .two-six,
+.f7.stack .two-seven,
+.p7.stack .two-seven,
+.f7.stack .three,
+.p7.stack .three,
+.f7.stack .three-four,
+.p7.stack .three-four,
+.f7.stack .three-five,
+.p7.stack .three-five,
+.f7.stack .three-six,
+.p7.stack .three-six,
+.f7.stack .three-seven,
+.p7.stack .three-seven,
+.f7.stack .four,
+.p7.stack .four,
+.f7.stack .four-five,
+.p7.stack .four-five,
+.f7.stack .four-seven,
+.p7.stack .four-seven,
+.f7.stack .five,
+.p7.stack .five,
+.f7.stack .five-seven,
+.p7.stack .five-seven,
+.f7.stack .six,
+.p7.stack .six,
+.f7.stack .six-seven,
+.p7.stack .six-seven,
+.f7.stack .seven,
+.p7.stack .seven,
+.f7.stack.margins .one,
+.p7.stack.margins .one,
+.f7.stack.margins .one-two,
+.p7.stack.margins .one-two,
+.f7.stack.margins .one-three,
+.p7.stack.margins .one-three,
+.f7.stack.margins .one-four,
+.p7.stack.margins .one-four,
+.f7.stack.margins .one-five,
+.p7.stack.margins .one-five,
+.f7.stack.margins .one-six,
+.p7.stack.margins .one-six,
+.f7.stack.margins .two,
+.p7.stack.margins .two,
+.f7.stack.margins .two-three,
+.p7.stack.margins .two-three,
+.f7.stack.margins .two-four,
+.p7.stack.margins .two-four,
+.f7.stack.margins .two-five,
+.p7.stack.margins .two-five,
+.f7.stack.margins .two-six,
+.p7.stack.margins .two-six,
+.f7.stack.margins .two-seven,
+.p7.stack.margins .two-seven,
+.f7.stack.margins .three,
+.p7.stack.margins .three,
+.f7.stack.margins .three-four,
+.p7.stack.margins .three-four,
+.f7.stack.margins .three-five,
+.p7.stack.margins .three-five,
+.f7.stack.margins .three-six,
+.p7.stack.margins .three-six,
+.f7.stack.margins .three-seven,
+.p7.stack.margins .three-seven,
+.f7.stack.margins .four,
+.p7.stack.margins .four,
+.f7.stack.margins .four-five,
+.p7.stack.margins .four-five,
+.f7.stack.margins .four-seven,
+.p7.stack.margins .four-seven,
+.f7.stack.margins .five,
+.p7.stack.margins .five,
+.f7.stack.margins .five-seven,
+.p7.stack.margins .five-seven,
+.f7.stack.margins .six,
+.p7.stack.margins .six,
+.f7.stack.margins .six-seven,
+.p7.stack.margins .six-seven,
+.f7.stack.margins .seven,
+.p7.stack.margins .seven,
+.f8.stack .one,
+.p8.stack .one,
+.f8.stack .one-two,
+.p8.stack .one-two,
+.f8.stack .one-three,
+.p8.stack .one-three,
+.f8.stack .one-four,
+.p8.stack .one-four,
+.f8.stack .one-five,
+.p8.stack .one-five,
+.f8.stack .one-six,
+.p8.stack .one-six,
+.f8.stack .one-seven,
+.p8.stack .one-seven,
+.f8.stack .two,
+.p8.stack .two,
+.f8.stack .two-three,
+.p8.stack .two-three,
+.f8.stack .two-four,
+.p8.stack .two-four,
+.f8.stack .two-five,
+.p8.stack .two-five,
+.f8.stack .two-six,
+.p8.stack .two-six,
+.f8.stack .two-seven,
+.p8.stack .two-seven,
+.f8.stack .two-eight,
+.p8.stack .two-eight,
+.f8.stack .three,
+.p8.stack .three,
+.f8.stack .three-four,
+.p8.stack .three-four,
+.f8.stack .three-five,
+.p8.stack .three-five,
+.f8.stack .three-six,
+.p8.stack .three-six,
+.f8.stack .three-seven,
+.p8.stack .three-seven,
+.f8.stack .three-eight,
+.p8.stack .three-eight,
+.f8.stack .four,
+.p8.stack .four,
+.f8.stack .four-five,
+.p8.stack .four-five,
+.f8.stack .four-six,
+.p8.stack .four-six,
+.f8.stack .four-seven,
+.p8.stack .four-seven,
+.f8.stack .four-eight,
+.p8.stack .four-eight,
+.f8.stack .five,
+.p8.stack .five,
+.f8.stack .five-six,
+.p8.stack .five-six,
+.f8.stack .five-seven,
+.p8.stack .five-seven,
+.f8.stack .five-eight,
+.p8.stack .five-eight,
+.f8.stack .six,
+.p8.stack .six,
+.f8.stack .six-seven,
+.p8.stack .six-seven,
+.f8.stack .six-eight,
+.p8.stack .six-eight,
+.f8.stack .seven,
+.p8.stack .seven,
+.f8.stack .seven-eight,
+.p8.stack .seven-eight,
+.f8.stack .eight,
+.p8.stack .eight,
+.f8.stack.margins .one,
+.p8.stack.margins .one,
+.f8.stack.margins .one-two,
+.p8.stack.margins .one-two,
+.f8.stack.margins .one-three,
+.p8.stack.margins .one-three,
+.f8.stack.margins .one-four,
+.p8.stack.margins .one-four,
+.f8.stack.margins .one-five,
+.p8.stack.margins .one-five,
+.f8.stack.margins .one-six,
+.p8.stack.margins .one-six,
+.f8.stack.margins .one-seven,
+.p8.stack.margins .one-seven,
+.f8.stack.margins .two,
+.p8.stack.margins .two,
+.f8.stack.margins .two-three,
+.p8.stack.margins .two-three,
+.f8.stack.margins .two-four,
+.p8.stack.margins .two-four,
+.f8.stack.margins .two-five,
+.p8.stack.margins .two-five,
+.f8.stack.margins .two-six,
+.p8.stack.margins .two-six,
+.f8.stack.margins .two-seven,
+.p8.stack.margins .two-seven,
+.f8.stack.margins .two-eight,
+.p8.stack.margins .two-eight,
+.f8.stack.margins .three,
+.p8.stack.margins .three,
+.f8.stack.margins .three-four,
+.p8.stack.margins .three-four,
+.f8.stack.margins .three-five,
+.p8.stack.margins .three-five,
+.f8.stack.margins .three-six,
+.p8.stack.margins .three-six,
+.f8.stack.margins .three-seven,
+.p8.stack.margins .three-seven,
+.f8.stack.margins .three-eight,
+.p8.stack.margins .three-eight,
+.f8.stack.margins .four,
+.p8.stack.margins .four,
+.f8.stack.margins .four-five,
+.p8.stack.margins .four-five,
+.f8.stack.margins .four-six,
+.p8.stack.margins .four-six,
+.f8.stack.margins .four-seven,
+.p8.stack.margins .four-seven,
+.f8.stack.margins .four-eight,
+.p8.stack.margins .four-eight,
+.f8.stack.margins .five,
+.p8.stack.margins .five,
+.f8.stack.margins .five-six,
+.p8.stack.margins .five-six,
+.f8.stack.margins .five-seven,
+.p8.stack.margins .five-seven,
+.f8.stack.margins .five-eight,
+.p8.stack.margins .five-eight,
+.f8.stack.margins .six,
+.p8.stack.margins .six,
+.f8.stack.margins .six-seven,
+.p8.stack.margins .six-seven,
+.f8.stack.margins .six-eight,
+.p8.stack.margins .six-eight,
+.f8.stack.margins .seven,
+.p8.stack.margins .seven,
+.f8.stack.margins .seven-eight,
+.p8.stack.margins .seven-eight,
+.f8.stack.margins .eight,
+.p8.stack.margins .eight {
+	width:100%;
+	margin-left:0;
+	float:none;
+}
+
+}
